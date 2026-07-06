@@ -131,7 +131,7 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
   <div class="eyebrow">남병준 · AI 자동화 · 에이전트 엔지니어</div>
   <h1>필요한 자동화는,<br><em class="k">직접 만들어</em> 왔습니다.</h1>
   <p class="sub">
-    코딩을 정식으로 배운 적은 없지만, 약 6개월 동안 투자와 일상의 반복 작업을 자동화하며 프로젝트를 19개 만들었습니다. 아래에는 그중 직무와 가까운 5개와, 자동화의 출발점이 된 실무 경험을 정리했습니다. 회사의 사내 업무를 가정해 만든 업무 자동화 PoC는 맨 뒤에 따로 담았습니다.
+    코딩을 정식으로 배운 적은 없지만, 약 6개월 동안 투자와 일상의 반복 작업을 자동화하며 프로젝트를 19개 만들었습니다. 아래에는 그중 직무와 가까운 프로젝트들과, 회사 업무를 가정해 만든 업무 자동화 PoC, 그리고 자동화의 출발점이 된 실무 경험을 함께 정리했습니다.
   </p>
   <div class="stats">
     <div class="stat"><div class="num">19</div><div class="lab">직접 만든 자동화 프로젝트</div></div>
@@ -145,7 +145,7 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
 <section><div class="wrap">
   <div class="tag"><span class="n">01</span><span class="t">주요 자동화 프로젝트</span><span class="l"></span></div>
   <h2>직접 만든 자동화 프로젝트와<br><em>관련 실무 경험</em>입니다.</h2>
-  <p class="lead">약 6개월간 만든 자동화 프로젝트 19개 중 직무와 가까운 5개를 골랐습니다. 이어서 자동화의 출발점이 된 메타플라이어 경험과 크립토 리서치·콘텐츠 경험을 정리했습니다.</p>
+  <p class="lead">약 6개월간 만든 자동화 프로젝트 중 직무와 가까운 것들과, 회사의 사내 업무를 가정해 만든 업무 자동화 PoC를 함께 정리했습니다. 이어서 자동화의 출발점이 된 메타플라이어 경험과 크립토 리서치·콘텐츠 경험을 담았습니다.</p>
 
   <div class="exp">
     <div class="exp-h">[개인 프로젝트] Claude 기반 예측 시장 분석 에이전트</div>
@@ -203,6 +203,17 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
   </div>
 
   <div class="exp">
+    <div class="exp-h">[업무 자동화 PoC] ERP·협업툴 사내 업무 자동화 + 대화형 에이전트</div>
+    <div class="exp-r"><div class="lab">기간</div><div class="val">2026.05 ~ 2026.06</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">국내 중소 제조·유통사의 ERP·협업툴 업무를 가정해, Slack에서 재고·미수금을 조회하는 에이전트와 안전재고 알림·입금 매칭·구매전표 초안 작성을 구현했습니다. 정답을 계산해 만든 평가 질문 5개로 조회 도구 선택과 답변 추출을 테스트했고 모두 통과했습니다.</div></div>
+    <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
+      <li><b>배경</b> · 특정 회사를 정하지 않고, 중소 제조·유통사에서 흔한 ERP·협업툴 반복 업무를 가정했습니다. 실제 ERP(이카운트)와 협업툴(Flow)은 데모 계정에서 API 연동이 제한되어 Airtable과 Slack으로 같은 구조를 구현했습니다</li>
+      <li><b>구현</b> · 안전재고 확인·입금 대조처럼 규칙이 분명한 일은 코드로 처리하고, 자유롭게 들어오는 질문만 에이전트가 맡도록 나눴습니다. 조회 전용 도구만 연결해 답이 조회 결과에만 근거하게 했고, 확인되지 않으면 모른다고 답하며 발주·입금처럼 결정이 필요한 일은 사람이 승인하도록 했습니다</li>
+      <li><b>결과</b> · 앞선 대화의 거래처와 맥락을 잇는 대화형 조회, 재고·재무·미수 분석을 병렬 실행해 정해진 시각에 팀 채널로 보내는 멀티에이전트 브리핑까지 구현했습니다. 합성 데이터로 만든 사내 업무 대시보드와 Slack 대화형 에이전트로 테스트했습니다</li>
+    </ul></div></div>
+  </div>
+
+  <div class="exp">
     <div class="exp-h">[㈜메타플라이어] 고객 맞춤 마케팅 자동화 · 데이터 분석</div>
     <div class="exp-r"><div class="lab">기간</div><div class="val">2023.07 ~ 2024.07 (1년 1개월)</div></div>
     <div class="exp-r"><div class="lab">성과</div><div class="val">고객사 업무에 맞춘 마케팅 자동화 시나리오 3건을 만들었습니다. 메일 확인·링크 클릭·설문 응답에 따라 후속 문자와 메일이 달라지도록 구성했고, GA·GTM·Clarity·Looker Studio 데이터를 대시보드에서 확인할 수 있게 정리했습니다.</div></div>
@@ -225,8 +236,8 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
   </div>
 </div></section>
 
-<!-- 06 역량과 한계 -->
-<section><div class="wrap">
+<!-- 02 역량과 한계 -->
+<section style="border-bottom:none;"><div class="wrap">
   <div class="tag"><span class="n">02</span><span class="t">역량과 한계</span><span class="l"></span></div>
   <h2>경험한 것과 배우고 있는 것을<br><em>구분해서 정리했습니다.</em></h2>
   <div class="honest-row" style="margin-top:26px;">
@@ -253,24 +264,6 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
       </ul>
     </div>
   </div>
-</div></section>
-
-<!-- 03 업무 자동화 PoC -->
-<section style="border-bottom:none;"><div class="wrap">
-  <div class="tag"><span class="n">03</span><span class="t">업무 자동화 PoC</span><span class="l"></span></div>
-  <h2>회사의 사내 업무를 가정해,<br><em>업무 자동화 PoC도 만들었습니다.</em></h2>
-  <p class="lead" style="margin-top:18px;">특정 회사를 정하지 않고, 국내 중소 제조·유통사에서 흔한 ERP·협업툴 업무를 가정했습니다. 정해진 절차는 코드로, 사람의 질문에 답하는 일은 에이전트로 나눠 처리했습니다. ERP(이카운트)와 협업툴(Flow)은 데모 계정에서 API 연동이 제한되어 Airtable과 Slack으로 같은 구조를 구현했습니다.</p>
-  <div class="exp" style="margin-top:28px;">
-    <div class="exp-h">ERP·협업툴 업무 자동화 + 대화형 Jarvis</div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">Slack에서 재고·미수금을 조회하는 에이전트, 안전재고 알림, 입금 매칭, 구매전표 초안 작성을 구현했습니다. 정답을 계산해 만든 평가 질문 5개로 조회 도구 선택과 답변 추출을 테스트했고 모두 통과했습니다.</div></div>
-    <div class="exp-r"><div class="lab">핵심</div><div class="val"><ul>
-      <li><b>대화형 조회</b> · 평소 쓰는 말로 물으면 데이터를 조회해 답하고, 앞선 대화의 거래처와 맥락을 이어갑니다</li>
-      <li><b>할루시네이션 방지 · 하네스 엔지니어링</b> · 조회 전용 도구만 연결해 답이 조회 결과에만 근거하게 했습니다. 확인되지 않으면 모른다고 답하고, 발주·입금처럼 결정이 필요한 일은 사람이 승인합니다</li>
-      <li><b>규칙 업무는 코드로</b> · 안전재고 확인·입금 대조처럼 규칙이 분명한 일은 코드로 처리하고, 자유롭게 들어오는 질문만 에이전트가 맡도록 나눴습니다</li>
-      <li><b>멀티에이전트 브리핑</b> · 재고·재무·미수 분석을 병렬로 실행해 모으고, 정해진 시각에 팀별 Slack 채널로 보냅니다</li>
-    </ul></div></div>
-  </div>
-  <p class="small mute" style="margin-top:20px;">합성 데이터로 구성한 사내 업무 대시보드와 Slack 대화형 에이전트까지 실제로 구현해 테스트했습니다.</p>
 </div></section>
 
 <footer>
