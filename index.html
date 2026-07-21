@@ -91,29 +91,29 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
   <div class="exp">
     <div class="exp-h"><span class="cat">[개인 프로젝트]</span>화면 인식 기반 게임 자동화</div>
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.05 ~ 2026.06</div></div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">이미지 인식만으로 화면 상태를 판단해 반복 조작을 대신하는 자동화를, 실제로 맡길 수 있는 수준까지 안정화했습니다. 설정을 분리해 PC와 노트북에서 같은 코드가 돌아가게 맞췄습니다.</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">게임 API 없이 화면 픽셀만 분석해 캐릭터의 상태와 위치를 판정하고, 반복 조작을 자동화했습니다. 해상도가 다른 PC와 노트북에서 코드 수정 없이 동일한 로직이 동작하도록 구현했습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
-      <li><b>배경</b> · 조작할 API가 없어 화면을 직접 읽어 위치와 상태를 판단해야 했습니다. PC와 노트북은 해상도가 달라 그 차이까지 흡수해야 했습니다</li>
-      <li><b>구현</b> · 템플릿 매칭과 HSV BLOB 감지를 함께 쓰고, 창을 1298×767로 맞춘 뒤 좌표를 0~1 범위로 정규화했습니다</li>
-      <li><b>결과와 개선</b> · 쓰면서 드러난 입력·포커스·오탐 문제를 안정화 패치 8개로 잡았습니다. 이동 경계가 좌우로 비대칭인 것(좌 0.04·우 0.77)도 화면에서 직접 재서 반영했습니다. 18일 동안 커밋 267개, 코드 1만 줄 규모로 개발했습니다</li>
+      <li><b>배경</b> · 조작 가능한 API가 없어 화면을 실시간으로 캡처해 픽셀 단위로 상태를 판정해야 했습니다. PC와 노트북은 해상도가 서로 달라, 환경마다 좌표가 어긋나는 문제가 있었습니다</li>
+      <li><b>구현</b> · 템플릿 매칭과 HSV 색상 기반 BLOB 검출을 병행했습니다. 게임 창을 1298×767로 표준화하고 절대 좌표를 0~1 상대 좌표로 정규화해, 해상도와 무관하게 동일한 좌표 로직을 적용했습니다. 환경별 값은 설정 파일로 분리했습니다</li>
+      <li><b>결과와 개선</b> · 운영 중 발생한 입력 누락·포커스 이탈·오탐지를 안정화 패치 8회로 해결했습니다. 이동 가능 경계가 좌우로 비대칭(좌 0.04·우 0.77)인 것을 실측해 반영했습니다. 18일간 커밋 267개, 약 1만 줄 규모로 개발했습니다</li>
     </ul></div></div>
   </div>
 
   <div class="exp">
-    <div class="exp-h"><span class="cat">[게임잼 출품]</span>메이플스토리 IP 2D 서바이버 게임</div>
+    <div class="exp-h"><span class="cat">[게임잼 출품]</span>메이플스토리 IP 2D 서바이버 'Night Lord Survivors'</div>
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.06 ~ 2026.07</div></div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">넥슨 메이플스토리 공식 IP 게임잼에 2D 서바이버 게임을 만들어 실제 플랫폼에 배포·제출했습니다. 이동과 자동공격, 레벨업 성장, 보스전, 리더보드까지 하나의 게임으로 묶었습니다.</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">넥슨 메이플스토리 공식 IP 게임잼에 2D 서바이버 게임 'Night Lord Survivors'를 출품해 심사를 통과하고 정식 배포됐습니다. 누적 플레이 4,326회, 월 활성 사용자 1,577명을 기록하고 있습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
       <li><b>배경</b> · 공식 IP 애셋과 지정 플랫폼이 주어진 게임잼이었습니다. 짧게 여러 판 즐기는 서바이버 장르를 골랐습니다</li>
       <li><b>구현</b> · 투사체 자동공격과 군집 스폰을 넣고, 레벨업마다 3택1로 능력을 고르게 했습니다. 보스전과 영구강화 상점도 붙였습니다. Phaser 엔진으로 화면을 그리고 게임 서버와 리더보드를 연동했습니다</li>
-      <li><b>결과와 개선</b> · 플레이테스트를 반복하며 조작감과 밸런스, UI를 다듬었습니다</li>
+      <li><b>결과와 개선</b> · 플레이테스트를 반복하며 조작감과 밸런스, UI를 다듬었습니다. 출시 뒤에는 실제 플레이 데이터(평균 플레이 타임 3분 29초, 이탈률 15.6%)를 지표로 개선점을 찾고 있습니다</li>
     </ul></div></div>
   </div>
 
   <div class="exp">
     <div class="exp-h"><span class="cat">[개인 프로젝트]</span>실시간 거래소·온체인 이상거래 탐지 시스템</div>
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.07 ~ 현재 (서버 24시간 운영)</div></div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">9개 체인과 여러 거래소에서 650여 개 종목을 실시간으로 지켜보며, 가격 이상이나 대량 자금 이동, 지갑 집중도 같은 신호 10여 종을 통합 감지하는 시스템입니다. 개인 연구용으로 서버에서 24시간 돌리고 있습니다.</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">9개 체인과 여러 거래소에서 650여 개 종목을 실시간으로 지켜보며, 가격 이상이나 대량 자금 이동, 지갑 집중도 같은 신호 10여 종을 통합 감지하는 시스템입니다. 개인 연구용으로 서버에서 24시간 운영하고 있습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
       <li><b>배경</b> · 이상 신호는 여러 거래소와 체인에 잠깐씩 나타났다 사라집니다. 눈으로 다 좇기 힘들어 자동으로 지켜보게 했습니다</li>
       <li><b>구현</b> · WebSocket으로 종목을 실시간 수집하고 신호를 종류별로 나눠 감지합니다. 여러 신호가 한 종목에 겹치면 더 확실한 신호로 보고 알립니다. 온체인 쪽은 9개 체인의 지갑과 입금 흐름까지 확인합니다</li>
@@ -124,7 +124,7 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
   <div class="exp">
     <div class="exp-h"><span class="cat">[개인 프로젝트]</span>왜 오르는지까지 짚는 신규 토큰 신호 봇</div>
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.07 ~ 현재 (서버 운영 중)</div></div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">5개 체인의 신규 토큰을 감지하는 데서 그치지 않고, "왜 오르는지"를 화제와 주요 지갑·계정 움직임으로 짚어 설명하는 봇입니다. 제가 쓰려고 만들어 서버에 띄워 뒀습니다.</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">5개 체인의 신규 토큰을 감지하는 데서 그치지 않고, "왜 오르는지"를 화제와 주요 지갑·계정 움직임으로 짚어 설명하는 개인용 봇입니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
       <li><b>배경</b> · 밈코인 시장은 새 토큰이 끊임없이 쏟아집니다. "떴다"만으로는 부족하고 "왜 떴는지"까지 알아야 판단할 수 있었습니다</li>
       <li><b>구현</b> · Solana·Base·BSC·Ethereum 등 5개 체인의 신규 토큰을 감지하고, 화제가 된 이유와 영향력 있는 지갑·계정의 움직임을 묶어 신호로 만듭니다. 급락 위험 경보와 관심도 점수도 함께 냅니다</li>
@@ -157,7 +157,7 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
   <div class="exp">
     <div class="exp-h"><span class="cat">[개인 프로젝트]</span>델타뉴트럴 트레이딩 봇</div>
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.01 ~ 2026.05</div></div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">predict.fun과 Polymarket의 시장 200여 개를 감시하며, 한쪽이 체결되면 반대 거래소에서 자동으로 헤지해 방향 위험을 줄이는 봇을 약 4개월간 실제 포인트 파밍에 돌렸습니다. 설정 158개와 관찰 로그 8,773줄을 바탕으로 복구 로직을 계속 손봤습니다.</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">predict.fun과 Polymarket의 시장 200여 개를 감시하며, 한쪽이 체결되면 반대 거래소에서 자동으로 헤지해 방향 위험을 줄이는 봇을 약 4개월간 실제 포인트 파밍에 운용했습니다. 설정 158개와 관찰 로그 8,773줄을 바탕으로 복구 로직을 계속 손봤습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
       <li><b>배경</b> · 가격이 어긋난 두 거래소에서 서로 반대로 걸어 방향 위험을 줄이는 방식입니다. 다만 가격 차이는 금방 사라지고 한쪽만 체결되면 위험이 남아, 수동으로는 따라가기 벅찼습니다</li>
       <li><b>구현</b> · predict.fun SDK와 Polymarket CLOB, Polygon RPC를 붙여 주문·체결·헤지·복구를 비동기로 처리했습니다</li>
@@ -165,7 +165,7 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
     </ul></div></div>
   </div>
 
-  <div class="more">이 외에도 알림 봇과 데이터 수집·자동화 스크립트를 여럿 만들었고, 일부는 서버에서 계속 돌아가고 있습니다.</div>
+  <div class="more">이 외에도 알림 봇과 데이터 수집·자동화 스크립트를 여럿 만들었고, 일부는 서버에서 계속 운영 중입니다.</div>
 
   <div class="tag" style="margin-top:80px;"><span class="n">·</span><span class="t">마케팅 · 콘텐츠 실무 경력</span><span class="l"></span></div>
 
