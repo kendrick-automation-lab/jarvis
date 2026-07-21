@@ -117,18 +117,18 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
       <li><b>배경</b> · 이상 신호는 여러 거래소와 체인에 잠깐씩 나타났다 사라집니다. 눈으로 다 좇기 힘들어 자동으로 지켜보게 했습니다</li>
       <li><b>구현</b> · WebSocket으로 종목을 실시간 수집하고 신호를 종류별로 나눠 감지합니다. 여러 신호가 한 종목에 겹치면 더 확실한 신호로 보고 알립니다. 온체인 쪽은 9개 체인의 지갑과 입금 흐름까지 확인합니다</li>
-      <li><b>검증과 한계</b> · 감지한 신호는 실제 가격 결과로 채점해, 성적이 나쁜 신호는 자동으로 비중을 낮춥니다. 다만 수익성이 검증됐다고 보지는 않고, 어떤 신호가 실제로 맞는지 데이터로 쌓아 가는 단계입니다. 배포 뒤 생긴 WebSocket 끊김은 비동기 구조로 바꿔 해결했습니다</li>
+      <li><b>검증과 한계</b> · 약 2주간 신호 2,800여 건을 감지하고 실제 가격 결과로 4,700여 회 채점해, 성적이 나쁜 신호는 자동으로 비중을 낮췄습니다. 다만 수익성이 검증됐다고 보지는 않고, 어떤 신호가 실제로 맞는지 데이터로 쌓아 가는 단계입니다. 배포 뒤 생긴 WebSocket 끊김은 비동기 구조로 바꿔 해결했습니다</li>
     </ul></div></div>
   </div>
 
   <div class="exp">
     <div class="exp-h"><span class="cat">[개인 프로젝트]</span>멀티체인 DEX 신규 토큰 신호 봇</div>
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.07 ~ 현재 (서버 운영 중)</div></div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">Solana·Base·BSC·Ethereum 등의 DEX 신규 토큰을 실시간 감지하고, X(트위터)·Grok API로 KOL·스마트머니의 움직임과 화제성을 분석해 "왜 오르는지"까지 귀속하는 개인용 봇입니다.</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">Solana·Base·BSC·Ethereum 등 5개 체인의 DEX 신규 토큰을 실시간 감지하고, X(트위터)·Grok API로 KOL·스마트머니의 움직임과 화제성을 분석해 "왜 오르는지"까지 귀속하는 개인용 봇입니다. 약 2주 운영하며 신규 토큰 15만여 개를 수집하고, 선별한 신호 1만 1천여 건을 텔레그램으로 보냈습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
       <li><b>배경</b> · 새로 나온 토큰이 갑자기 급등하는 일은 잦지만, 어떤 토큰이 "떴다"는 사실만으로는 부족하고 "왜 떴는지"까지 알아야 판단할 수 있었습니다</li>
       <li><b>구현</b> · 5개 체인의 온체인 데이터와 X·Grok API 신호를 함께 활용해, 토큰마다 화제성·KOL 관심도·스마트머니 유입을 합친 하입 점수를 계산합니다. 급락 직전 출구 신호도 함께 감지합니다</li>
-      <li><b>결과와 개선</b> · 주요 데이터 소스가 Cloudflare 봇 차단(JA3 지문)으로 막히자 curl_cffi로 브라우저 지문을 우회해 안정적으로 수집했습니다. 최종 신호는 텔레그램으로 받고 있습니다</li>
+      <li><b>결과와 개선</b> · 지갑 거래 280만 건과 KOL 거래 41만 건을 쌓아 스마트머니 판별에 썼습니다. 주요 데이터 소스가 Cloudflare 봇 차단(JA3 지문)으로 막히자 curl_cffi로 브라우저 지문을 우회해 안정적으로 수집했습니다</li>
     </ul></div></div>
   </div>
 
