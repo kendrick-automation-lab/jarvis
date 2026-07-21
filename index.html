@@ -163,7 +163,7 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
   <div class="exp">
     <div class="exp-h">[개인 프로젝트] 델타뉴트럴 트레이딩 봇</div>
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.01 ~ 2026.05</div></div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">predict.fun과 Polymarket의 약 200개 시장 후보를 함께 감시하고, 가격 차이가 있는 시장에서 한쪽 거래가 체결되면 반대편 거래소에서 헤지를 시도해 델타를 줄이는 흐름을 만들었습니다. 가격 차이와 보상 조건을 함께 보며 기대값이 양수인(EV+) 상황을 찾았고, 거래 보상 조건을 맞추는 포인트 파밍 운영에 실제 사용했습니다. 이 과정에서 주문·체결·헤지·복구가 이어지는 자동화 흐름을 직접 다뤘습니다.</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">predict.fun과 Polymarket의 약 200개 시장을 감시하며, 한쪽 거래가 체결되면 반대 거래소에서 자동으로 헤지해 가격 변동 위험을 줄이는 흐름을 만들었습니다. 주문·체결·헤지·복구가 이어지는 자동화를 직접 다뤘고, 실제 포인트 파밍 운영에 사용했습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
       <li><b>배경</b> · 델타뉴트럴 전략은 시장 방향을 맞히기보다, 가격 차이가 있는 두 거래소에서 서로 반대 방향의 거래를 잡아 가격 변동 위험을 줄이는 방식입니다. 다만 가격 차이는 금방 사라지고 한쪽 주문만 체결되면 위험이 남기 때문에, 사람이 수동으로 따라가기 어려웠습니다</li>
       <li><b>구현</b> · predict.fun SDK, Polymarket CLOB, Polygon RPC를 연결하고 주문·체결·헤지·복구 과정을 비동기로 처리했습니다</li>
@@ -196,7 +196,7 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
   <div class="exp">
     <div class="exp-h">[개인 프로젝트] 실시간 거래소·온체인 이상거래 탐지 시스템</div>
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.07 ~ 현재 (서버 24시간 운영)</div></div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">여러 거래소와 블록체인에서 이상거래·시장 조작 신호를 실시간으로 감지하는 시스템을 서버에서 24시간 운영하고 있습니다. 감지한 신호를 실제 가격 결과로 채점해, 성과가 낮은 신호는 자동으로 걸러지도록 만든 것이 핵심입니다.</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">여러 거래소와 블록체인에서 이상거래·시장 조작 신호를 실시간으로 감지하는 시스템을 서버에서 24시간 운영하고 있습니다. 감지한 신호를 실제 가격 결과로 채점해, 성과가 낮은 신호는 자동으로 걸러내도록 만들었습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
       <li><b>배경</b> · 이상 신호가 여러 거래소·체인·토큰에 짧게 흩어져 발생해, 사람이 실시간으로 전수 감시하기 어려웠습니다</li>
       <li><b>구현</b> · WebSocket으로 650여 개 종목을 실시간 수집하고, 가격 이상·대량 자금 이동·지갑 집중도 등 10여 종 신호를 통합 감지했습니다. 여러 신호가 겹치면 확증으로 승격해 알립니다. 온체인은 9개 체인의 지갑·입금 흐름까지 확인합니다</li>
@@ -218,7 +218,7 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
   <div class="exp">
     <div class="exp-h">[업무 자동화 PoC] ERP·협업툴 사내 업무 자동화 + 대화형 에이전트</div>
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.05 ~ 2026.06</div></div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">국내 중소 제조·유통사의 ERP·협업툴 업무를 가정해, Slack에서 자연어로 물으면 데이터를 조회해 답하는 에이전트와 안전재고 알림·입금 매칭·구매전표 초안 작성을 구현했습니다. 규칙이 분명한 일은 코드로, 판단이 필요한 일은 AI로 나눠 설계한 것이 핵심입니다.</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">국내 중소 제조·유통사의 ERP·협업툴 업무를 가정해, Slack에서 자연어로 물으면 데이터를 조회해 답하는 에이전트와 안전재고 알림·입금 매칭·구매전표 초안 작성을 구현했습니다. 규칙이 분명한 일은 코드로, 판단이 필요한 일은 AI로 나눠 설계했습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
       <li><b>배경</b> · 특정 회사를 정하지 않고, 중소 제조·유통사에서 흔한 ERP·협업툴 반복 업무를 가정했습니다. 실제 ERP(이카운트)와 협업툴(Flow)은 데모 계정에서 API 연동이 제한되어 Airtable과 Slack으로 같은 구조를 구현했습니다</li>
       <li><b>구현</b> · 안전재고 확인·입금 대조처럼 규칙이 분명한 일은 코드로 처리하고, 자유롭게 들어오는 질문만 에이전트가 맡도록 나눴습니다. 조회 전용 도구만 연결해 답이 조회 결과에만 근거하게 했고, 확인되지 않으면 모른다고 답하며 발주·입금처럼 결정이 필요한 일은 사람이 승인하도록 했습니다</li>
