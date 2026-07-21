@@ -115,7 +115,7 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.07 ~ 현재 (서버 24시간 운영)</div></div>
     <div class="exp-r"><div class="lab">성과</div><div class="val">9개 체인과 여러 거래소에서 650여 개 종목을 실시간으로 지켜보며, 가격 이상이나 대량 자금 이동, 지갑 집중도 같은 신호 10여 종을 통합 감지하는 시스템입니다. 개인 연구용으로 서버에서 24시간 운영하고 있습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
-      <li><b>배경</b> · 이상 신호는 여러 거래소와 체인에 잠깐씩 나타났다 사라집니다. 눈으로 다 좇기 힘들어 자동으로 지켜보게 했습니다</li>
+      <li><b>배경</b> · 이상 신호는 여러 거래소와 체인에 잠깐씩 나타났다 사라집니다. 이걸 사람이 눈으로 다 좇기 힘들어 자동으로 감시하게 했습니다</li>
       <li><b>구현</b> · WebSocket으로 종목을 실시간 수집하고 신호를 종류별로 나눠 감지합니다. 여러 신호가 한 종목에 겹치면 더 확실한 신호로 보고 알립니다. 온체인 쪽은 9개 체인의 지갑과 입금 흐름까지 확인합니다</li>
       <li><b>검증과 한계</b> · 약 2주간 신호 2,800여 건을 감지하고 실제 가격 결과로 4,700여 회 채점해, 성적이 나쁜 신호는 자동으로 비중을 낮췄습니다. 다만 수익성이 검증됐다고 보지는 않고, 어떤 신호가 실제로 맞는지 데이터로 쌓아 가는 단계입니다. 배포 뒤 생긴 WebSocket 끊김은 비동기 구조로 바꿔 해결했습니다</li>
     </ul></div></div>
@@ -126,7 +126,7 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.07 ~ 현재 (서버 운영 중)</div></div>
     <div class="exp-r"><div class="lab">성과</div><div class="val">Solana·Base·BSC·Ethereum 등 5개 체인의 DEX 신규 토큰을 실시간 감지하고, X(트위터)·Grok API로 KOL·스마트머니의 움직임과 화제성을 분석해 "왜 오르는지"까지 귀속하는 개인용 봇입니다. 약 2주 운영하며 신규 토큰 15만여 개를 수집하고, 선별한 신호 1만 1천여 건을 텔레그램으로 보냈습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
-      <li><b>배경</b> · 새로 나온 토큰이 갑자기 오르는 일은 잦지만, 어떤 토큰이 올랐다는 사실만으로는 부족하고 왜 올랐는지까지 알아야 판단할 수 있었습니다</li>
+      <li><b>배경</b> · 새로 나온 토큰이 갑자기 오르는 일은 잦지만, 어떤 토큰이 올랐다는 사실만으로는 부족하고 왜 올랐는지 알아야 따라 들어갈 만한 신호인지 판단할 수 있었습니다</li>
       <li><b>구현</b> · 5개 체인의 온체인 데이터와 X·Grok API 신호를 함께 활용해, 토큰마다 화제성·KOL 관심도·스마트머니 유입을 합친 하입 점수를 계산합니다. 급락 직전 출구 신호도 함께 감지합니다</li>
       <li><b>결과와 개선</b> · 지갑 거래 280만 건과 KOL 거래 41만 건을 쌓아 스마트머니 판별에 썼습니다. 주요 데이터 소스가 Cloudflare 봇 차단(JA3 지문)으로 막히자 curl_cffi로 브라우저 지문을 우회해 안정적으로 수집했습니다</li>
     </ul></div></div>
@@ -146,11 +146,11 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
   <div class="exp">
     <div class="exp-h"><span class="cat">[개인 프로젝트]</span>예측시장 인사이더·이상거래 감지 봇</div>
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.01 ~ 2026.05</div></div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">거래 34,446건을 수집해 지갑 이력과 포지션 집중도, 시장 상황으로 이상 징후를 가려냈습니다. 거래를 하나하나 다 확인하는 대신, 점수와 근거가 붙은 신호만 보면 되도록 했습니다.</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">약 5개월간 예측시장 거래를 실시간 분석해, 인사이더 의심 지갑 147개를 적발하고 동시 매집 클러스터 1만 1천여 건을 감지했습니다. 지갑 이력·포지션 집중도·시장 상황을 0~100점으로 계산해, 고신뢰 신호 880여 건을 골라 알렸습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
       <li><b>배경</b> · 이상 패턴은 거래 내역과 지갑 이력, 시장 상황을 같이 봐야 잡힙니다. 매번 반복하기엔 손이 많이 갔고, 거래가 쌓일수록 놓치는 게 생겼습니다</li>
       <li><b>구현</b> · WebSocket으로 거래를 모으고 지갑 생성 시점과 포지션 집중도, 시장 상황, 지갑 간 움직임을 합쳐 0~100점으로 계산했습니다</li>
-      <li><b>검증과 개선</b> · 공개된 인사이더 사례 5건에서 반복되는 특징을 감지 기준에 반영했습니다. 점수와 근거를 SQLite에 함께 저장해 신호마다 왜 그렇게 판정했는지 나중에 확인할 수 있고, 감지한 신호는 일부 사람들에게 공유했습니다</li>
+      <li><b>검증과 개선</b> · 공개된 인사이더 사례 5건에서 반복되는 특징을 감지 기준에 반영했습니다. 발송한 신호 중 정산된 1,485건을 실제 시장 결과와 대조하니 785건이 적중했습니다. 점수와 근거는 SQLite에 저장해 신호마다 판정 이유를 되짚을 수 있게 했고, 이 신호는 일부 사람들에게 공유했습니다</li>
     </ul></div></div>
   </div>
 
@@ -193,11 +193,11 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
 
 <!-- 02 핵심 역량 · 기술 스택 -->
 <section style="border-bottom:none;"><div class="wrap">
-  <div class="tag"><span class="n">02</span><span class="t">할 수 있는 일 · 쓰는 도구</span><span class="l"></span></div>
-  <h2>제가 <em>할 수 있는 일과 쓰는 도구</em></h2>
+  <div class="tag"><span class="n">02</span><span class="t">핵심 역량 · 기술 스택</span><span class="l"></span></div>
+  <h2><em>핵심 역량</em>과 기술 스택</h2>
   <div class="honest-row" style="margin-top:26px;">
     <div class="card honest-col">
-      <h3 class="tick">할 수 있는 일</h3>
+      <h3 class="tick">핵심 역량</h3>
       <ul class="clean">
         <li>AI(Claude Code·Codex)로 필요한 자동화를 직접 만들어 왔습니다 (6개월간 19개)</li>
         <li>질문에 맞는 도구를 AI가 스스로 골라 처리하는 대화형 에이전트를 만듭니다</li>
@@ -212,7 +212,7 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
       </ul>
     </div>
     <div class="card honest-col">
-      <h3 style="color:var(--accent);">쓰는 도구</h3>
+      <h3 style="color:var(--accent);">기술 스택</h3>
       <ul class="clean">
         <li><b>언어</b> · Python(주력) · JavaScript · PowerShell</li>
         <li><b>AI · LLM</b> · Claude API · Claude Code · Codex · Grok API · tool-use · 멀티에이전트</li>
