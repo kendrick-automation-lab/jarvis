@@ -102,11 +102,11 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
   <div class="exp">
     <div class="exp-h"><span class="cat">[게임잼 출품]</span>메이플스토리 IP 2D 서바이버 'Night Lord Survivors'</div>
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.06 ~ 2026.07</div></div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">넥슨 메이플스토리 공식 IP 게임잼에 2D 서바이버 게임 'Night Lord Survivors'를 출품해 심사를 통과하고 정식 배포됐습니다. 누적 플레이 4,326회, 월 활성 사용자 1,577명을 기록하고 있습니다.</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">넥슨 메이플스토리 공식 IP 게임잼에 2D 서바이버 게임 'Night Lord Survivors'를 출품해 심사를 통과하고 정식 배포됐습니다. 누적 플레이 4,326회, 월 활성 사용자 1,577명, 좋아요 26개를 기록하고 있습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
       <li><b>배경</b> · 공식 IP 애셋과 지정 플랫폼이 주어진 게임잼이었습니다. 짧게 여러 판 즐기는 서바이버 장르를 골랐습니다</li>
       <li><b>구현</b> · 투사체 자동공격과 군집 스폰을 넣고, 레벨업마다 3택1로 능력을 고르게 했습니다. 보스전과 영구강화 상점도 붙였습니다. Phaser 엔진으로 화면을 그리고 게임 서버와 리더보드를 연동했습니다</li>
-      <li><b>결과와 개선</b> · 플레이테스트를 반복하며 조작감과 밸런스, UI를 다듬었습니다. 출시 뒤에는 실제 플레이 데이터(평균 플레이 타임 3분 29초, 이탈률 15.6%)를 지표로 개선점을 찾고 있습니다</li>
+      <li><b>결과와 개선</b> · 플레이테스트를 반복하며 조작감과 밸런스, UI를 다듬었습니다. 출시 뒤에는 실제 플레이 데이터(일 활성 13명·평균 플레이 3분 29초·이탈률 15.6%)를 지표로 개선점을 찾고 있습니다</li>
     </ul></div></div>
   </div>
 
@@ -124,20 +124,20 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
   <div class="exp">
     <div class="exp-h"><span class="cat">[개인 프로젝트]</span>멀티체인 DEX 신규 토큰 신호 봇</div>
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.07 ~ 현재 (서버 운영 중)</div></div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">Solana·Base·BSC·Ethereum 등의 DEX 신규 토큰을 실시간 감지하고, X(트위터) API로 KOL·스마트머니 계정의 움직임을 추적해 "왜 오르는지"까지 귀속하는 개인용 봇입니다.</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">Solana·Base·BSC·Ethereum 등의 DEX 신규 토큰을 실시간 감지하고, X(트위터)·Grok API로 KOL·스마트머니의 움직임과 화제성을 분석해 "왜 오르는지"까지 귀속하는 개인용 봇입니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
       <li><b>배경</b> · 밈코인 시장은 새 토큰이 끊임없이 쏟아집니다. "떴다"만으로는 부족하고 "왜 떴는지"까지 알아야 판단할 수 있었습니다</li>
-      <li><b>구현</b> · 5개 체인의 온체인 데이터와 X 계정 신호를 함께 수집해, 토큰마다 화제성·KOL 관심도·스마트머니 유입을 합친 하입 점수를 계산합니다. 급락 직전 출구 신호도 함께 감지합니다</li>
+      <li><b>구현</b> · 5개 체인의 온체인 데이터와 X·Grok API 신호를 함께 활용해, 토큰마다 화제성·KOL 관심도·스마트머니 유입을 합친 하입 점수를 계산합니다. 급락 직전 출구 신호도 함께 감지합니다</li>
       <li><b>결과와 개선</b> · 주요 데이터 소스가 Cloudflare 봇 차단(JA3 지문)으로 막히자 curl_cffi로 브라우저 지문을 우회해 안정적으로 수집했습니다. 최종 신호는 텔레그램으로 받고 있습니다</li>
     </ul></div></div>
   </div>
 
   <div class="exp">
-    <div class="exp-h"><span class="cat">[개인 프로젝트]</span>Claude 기반 실시간 마켓 분석 에이전트</div>
+    <div class="exp-h"><span class="cat">[개인 프로젝트]</span>예측시장 시뮬레이션 분석 에이전트 (Claude)</div>
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.02 ~ 2026.03</div></div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">활성 이벤트 100여 개 중 거래량·유동성 상위 20개를 Claude가 주기적으로 분석해, 조건에 맞는 주문안을 DRY_RUN으로 내는 흐름을 만들었습니다. 초기 기록에 분석 954회와 모의 주문 1,353건이 남아 있습니다. 모니터 앞에서 직접 지켜보던 걸 자동으로 돌려 결과만 보게 바꿨습니다.</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">예측시장의 활성 이벤트 100여 개 중 거래량·유동성 상위 20개를 Claude가 주기적으로 분석해, 실제 주문 없이 시뮬레이션(DRY_RUN)으로 매매안을 내는 흐름을 만들었습니다. 분석 954회와 모의 주문 1,353건을 기록했습니다. 직접 지켜보던 과정을 자동화해 결과만 확인하도록 바꿨습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
-      <li><b>배경</b> · 활성 시장이 워낙 많아 일정한 주기로 다 들여다보기 어려웠습니다</li>
+      <li><b>배경</b> · 예측시장은 활성 이벤트가 워낙 많아 일정한 주기로 다 들여다보기 어려웠습니다</li>
       <li><b>구현</b> · 이벤트 100여 개를 불러와 거래량과 유동성으로 20개를 추리고, 포트폴리오와 함께 Claude API에 넘겨 매매 의견을 JSON으로 받았습니다</li>
       <li><b>검증과 개선</b> · 초기 표본 14건의 p-value는 0.53이었습니다. 우연으로도 나올 수 있는 값이라 이것만으로 수익성이 검증됐다고 보지 않았습니다. 한도를 벗어난 답은 코드로 걸렀고, 판단 과정과 모의 결과는 로그로 남겨 언제든 되짚습니다</li>
     </ul></div></div>
@@ -155,12 +155,12 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
   </div>
 
   <div class="exp">
-    <div class="exp-h"><span class="cat">[개인 프로젝트]</span>델타뉴트럴 트레이딩 봇</div>
+    <div class="exp-h"><span class="cat">[개인 프로젝트]</span>예측시장 델타뉴트럴 차익거래 봇</div>
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.01 ~ 2026.05</div></div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">서로 다른 두 온체인 거래소의 시장 200여 개를 감시하며, 한쪽이 체결되면 반대 거래소에서 자동으로 헤지해 방향 위험을 줄이는 봇을 약 4개월간 운용했습니다. 설정 158개와 관찰 로그 8,773줄을 바탕으로 복구 로직을 계속 손봤습니다.</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">predict.fun과 Polymarket 두 예측시장의 시장 200여 개를 감시하며, 한쪽이 체결되면 반대 거래소에서 자동으로 헤지해 방향 위험을 줄이는 봇을 약 4개월간 운용했습니다. 설정 158개와 관찰 로그 8,773줄을 바탕으로 복구 로직을 계속 손봤습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
       <li><b>배경</b> · 가격이 어긋난 두 거래소에서 서로 반대로 걸어 방향 위험을 줄이는 방식입니다. 다만 가격 차이는 금방 사라지고 한쪽만 체결되면 위험이 남아, 수동으로는 따라가기 벅찼습니다</li>
-      <li><b>구현</b> · 두 거래소의 SDK와 CLOB API, Polygon RPC를 붙여 주문·체결·헤지·복구를 비동기로 처리했습니다</li>
+      <li><b>구현</b> · predict.fun SDK와 Polymarket CLOB, Polygon RPC를 붙여 주문·체결·헤지·복구를 비동기로 처리했습니다</li>
       <li><b>운영과 개선</b> · 3시간·12시간 주기로 관찰하며 가격 차이와 보상 조건이 맞아떨어지는(EV+) 상황을 활용했습니다. 관찰 로그가 쌓일수록 복구 로직을 조금씩 다듬었습니다</li>
     </ul></div></div>
   </div>
@@ -215,7 +215,7 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
       <h3 style="color:var(--accent);">쓰는 도구</h3>
       <ul class="clean">
         <li><b>언어</b> · Python(주력) · JavaScript · PowerShell</li>
-        <li><b>AI · LLM</b> · Claude API · Claude Code · Codex · tool-use · 멀티에이전트</li>
+        <li><b>AI · LLM</b> · Claude API · Claude Code · Codex · Grok API · tool-use · 멀티에이전트</li>
         <li><b>실시간 · 비동기</b> · asyncio · WebSocket</li>
         <li><b>데이터 · 온체인</b> · SQLite · Airtable · web3.py · curl_cffi</li>
         <li><b>화면 인식</b> · OpenCV · mss · win32</li>
