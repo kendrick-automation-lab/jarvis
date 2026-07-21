@@ -126,7 +126,7 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.07 ~ 현재 (서버 운영 중)</div></div>
     <div class="exp-r"><div class="lab">성과</div><div class="val">Solana·Base·BSC·Ethereum 등의 DEX 신규 토큰을 실시간 감지하고, X(트위터)·Grok API로 KOL·스마트머니의 움직임과 화제성을 분석해 "왜 오르는지"까지 귀속하는 개인용 봇입니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
-      <li><b>배경</b> · 밈코인 시장은 새 토큰이 끊임없이 쏟아집니다. "떴다"만으로는 부족하고 "왜 떴는지"까지 알아야 판단할 수 있었습니다</li>
+      <li><b>배경</b> · 새로 나온 토큰이 갑자기 급등하는 일은 잦지만, 어떤 토큰이 "떴다"는 사실만으로는 부족하고 "왜 떴는지"까지 알아야 판단할 수 있었습니다</li>
       <li><b>구현</b> · 5개 체인의 온체인 데이터와 X·Grok API 신호를 함께 활용해, 토큰마다 화제성·KOL 관심도·스마트머니 유입을 합친 하입 점수를 계산합니다. 급락 직전 출구 신호도 함께 감지합니다</li>
       <li><b>결과와 개선</b> · 주요 데이터 소스가 Cloudflare 봇 차단(JA3 지문)으로 막히자 curl_cffi로 브라우저 지문을 우회해 안정적으로 수집했습니다. 최종 신호는 텔레그램으로 받고 있습니다</li>
     </ul></div></div>
@@ -135,9 +135,9 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
   <div class="exp">
     <div class="exp-h"><span class="cat">[개인 프로젝트]</span>예측시장 시뮬레이션 분석 에이전트 (Claude)</div>
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.02 ~ 2026.03</div></div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">예측시장의 활성 이벤트 100여 개 중 거래량·유동성 상위 20개를 Claude가 주기적으로 분석해, 실제 주문 없이 시뮬레이션(DRY_RUN)으로 매매안을 내는 흐름을 만들었습니다. 분석 954회와 모의 주문 1,353건을 기록했습니다. 직접 지켜보던 과정을 자동화해 결과만 확인하도록 바꿨습니다.</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">예측시장의 활성 이벤트 100여 개 중 거래량·유동성 상위 20개를 Claude가 주기적으로 분석해, 실제 주문 없이 시뮬레이션(DRY_RUN)으로 매매안을 내는 흐름을 만들었습니다. 분석 954회와 모의 주문 1,353건을 기록했습니다. 계속 눈으로 지켜봐야 했던 시장 감시를 자동화해, 결과만 확인하면 되도록 바꿨습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
-      <li><b>배경</b> · 예측시장은 활성 이벤트가 워낙 많아 일정한 주기로 다 들여다보기 어려웠습니다</li>
+      <li><b>배경</b> · 예측시장은 동시에 열리는 이벤트가 많아, 사람이 일정한 주기로 전부 확인하기 어려웠습니다</li>
       <li><b>구현</b> · 이벤트 100여 개를 불러와 거래량과 유동성으로 20개를 추리고, 포트폴리오와 함께 Claude API에 넘겨 매매 의견을 JSON으로 받았습니다</li>
       <li><b>검증과 개선</b> · 초기 표본 14건의 p-value는 0.53이었습니다. 우연으로도 나올 수 있는 값이라 이것만으로 수익성이 검증됐다고 보지 않았습니다. 한도를 벗어난 답은 코드로 걸렀고, 판단 과정과 모의 결과는 로그로 남겨 언제든 되짚습니다</li>
     </ul></div></div>
@@ -146,7 +146,7 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
   <div class="exp">
     <div class="exp-h"><span class="cat">[개인 프로젝트]</span>인사이더·이상거래 감지 봇</div>
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.01 ~ 2026.05</div></div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">거래 34,446건을 수집해 지갑 이력과 포지션 집중도, 시장 상황으로 이상 징후를 가려냈습니다. 전부 들여다보는 대신 점수와 근거가 붙은 신호만 보면 되게 했습니다.</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">거래 34,446건을 수집해 지갑 이력과 포지션 집중도, 시장 상황으로 이상 징후를 가려냈습니다. 거래를 하나하나 다 확인하는 대신, 점수와 근거가 붙은 신호만 보면 되도록 했습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
       <li><b>배경</b> · 이상 패턴은 거래 내역과 지갑 이력, 시장 상황을 같이 봐야 잡힙니다. 매번 반복하기엔 손이 많이 갔고, 거래가 쌓일수록 놓치는 게 생겼습니다</li>
       <li><b>구현</b> · WebSocket으로 거래를 모으고 지갑 생성 시점과 포지션 집중도, 시장 상황, 지갑 간 움직임을 합쳐 0~100점으로 계산했습니다</li>
@@ -157,11 +157,11 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
   <div class="exp">
     <div class="exp-h"><span class="cat">[개인 프로젝트]</span>예측시장 델타뉴트럴 차익거래 봇</div>
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.01 ~ 2026.05</div></div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">predict.fun과 Polymarket 두 예측시장의 시장 200여 개를 감시하며, 한쪽이 체결되면 반대 거래소에서 자동으로 헤지해 방향 위험을 줄이는 봇을 약 4개월간 운용했습니다. 설정 158개와 관찰 로그 8,773줄을 바탕으로 복구 로직을 계속 손봤습니다.</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">predict.fun과 Polymarket 두 예측시장을 대상으로, 한쪽이 체결되면 반대 거래소에서 자동으로 헤지해 방향 위험을 줄이는 델타뉴트럴 전략을 약 4개월간 시뮬레이션(모의 주문)으로 검증했습니다. 설정 158개와 관찰 로그 8,773줄을 바탕으로 복구 로직을 계속 손봤습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
-      <li><b>배경</b> · 가격이 어긋난 두 거래소에서 서로 반대로 걸어 방향 위험을 줄이는 방식입니다. 다만 가격 차이는 금방 사라지고 한쪽만 체결되면 위험이 남아, 수동으로는 따라가기 벅찼습니다</li>
+      <li><b>배경</b> · 가격이 어긋난 두 거래소에서 서로 반대 방향으로 포지션을 잡아 방향 위험을 줄이는 전략입니다. 다만 가격 차이는 금방 사라지고 한쪽만 체결되면 위험이 남아, 수동으로는 이 타이밍을 따라가기 벅찼습니다</li>
       <li><b>구현</b> · predict.fun SDK와 Polymarket CLOB, Polygon RPC를 붙여 주문·체결·헤지·복구를 비동기로 처리했습니다</li>
-      <li><b>운영과 개선</b> · 3시간·12시간 주기로 관찰하며 가격 차이와 보상 조건이 맞아떨어지는(EV+) 상황을 활용했습니다. 관찰 로그가 쌓일수록 복구 로직을 조금씩 다듬었습니다</li>
+      <li><b>검증과 개선</b> · 3시간·12시간 주기로 시뮬레이션을 돌리며 가격 차이와 보상 조건이 맞아떨어지는(EV+) 상황을 포착했습니다. 관찰 로그가 쌓일수록 복구 로직을 조금씩 다듬었습니다</li>
     </ul></div></div>
   </div>
 
