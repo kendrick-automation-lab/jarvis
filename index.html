@@ -19,15 +19,16 @@ html{scroll-behavior:smooth;}
 body{font-family:'GmarketSans','Pretendard','Malgun Gothic',sans-serif;font-weight:300;
   background:var(--bg);color:var(--text);line-height:1.75;letter-spacing:-.01em;-webkit-font-smoothing:antialiased;}
 .wrap{max-width:980px;margin:0 auto;padding:0 40px;}
-section{padding:100px 0;border-bottom:1px solid var(--line);position:relative;}
+section{padding:110px 0;border-bottom:1px solid var(--line);position:relative;}
 .tag{display:flex;align-items:center;gap:14px;margin-bottom:40px;}
 .tag .n{font-weight:700;font-size:13px;color:var(--accent);letter-spacing:.04em;}
 .tag .t{font-size:12px;color:var(--mute);letter-spacing:.18em;text-transform:uppercase;font-weight:500;}
 .tag .l{flex:1;height:1px;background:var(--line);}
-h1{font-weight:700;font-size:52px;line-height:1.18;letter-spacing:-.02em;}
-h2{font-weight:700;font-size:29px;line-height:1.3;letter-spacing:-.02em;margin-bottom:16px;}
+h1{font-weight:700;font-size:54px;line-height:1.18;letter-spacing:-.02em;}
+h2{font-weight:700;font-size:30px;line-height:1.3;letter-spacing:-.02em;margin-bottom:18px;}
 h2 em{font-style:normal;color:var(--accent);}
-.lead{font-size:16px;color:#d2d0dc;font-weight:300;max-width:780px;margin-bottom:8px;line-height:1.8;}
+h3{font-weight:500;font-size:17px;margin-bottom:8px;}
+.lead{font-size:16.5px;color:#d2d0dc;font-weight:300;max-width:760px;margin-bottom:8px;line-height:1.8;}
 .mute{color:var(--mute);} .small{font-size:14.5px;}
 p{margin:8px 0;} b,strong{font-weight:500;color:#fff;}
 em.k{font-style:normal;color:var(--accent);font-weight:500;}
@@ -36,196 +37,234 @@ em.k{font-style:normal;color:var(--accent);font-weight:500;}
 .cover{min-height:100vh;display:flex;flex-direction:column;justify-content:center;border-bottom:1px solid var(--line);}
 .eyebrow{font-size:13px;color:var(--mute);letter-spacing:.05em;margin-bottom:26px;font-weight:500;}
 .cover h1{margin-bottom:26px;}
-.cover .sub{font-size:17px;color:#cfcdda;max-width:720px;line-height:1.8;font-weight:300;}
-.stats{display:flex;gap:48px;margin-top:52px;flex-wrap:wrap;}
-.stat .num{font-weight:700;font-size:34px;color:#fff;}
-.stat .lab{font-size:14px;color:#b4b2c2;margin-top:8px;letter-spacing:.01em;}
-.cover .id{margin-top:54px;font-size:15.5px;color:#b4b2c2;display:flex;gap:24px;flex-wrap:wrap;}
+.cover .sub{font-size:17px;color:#cfcdda;max-width:680px;line-height:1.8;font-weight:300;}
+.cover .sub .honest{display:block;margin-top:14px;font-size:14px;color:var(--mute);}
+.cover-links{margin-top:50px;display:flex;align-items:center;gap:14px 24px;flex-wrap:wrap;font-size:16px;}
+.cover-links .lab{color:var(--mute);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:500;}
+.cover-links a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(155,140,255,.4);padding-bottom:2px;font-weight:500;}
+.stats{display:flex;gap:48px;margin-top:54px;flex-wrap:wrap;}
+.stat .num{font-weight:700;font-size:36px;color:#fff;}
+.stat .lab{font-size:14.5px;color:#b4b2c2;margin-top:8px;letter-spacing:.01em;}
+.cover .id{margin-top:56px;font-size:15.5px;color:#b4b2c2;display:flex;gap:24px;flex-wrap:wrap;}
 
-/* project blocks */
-.lead-note{font-size:14px;color:var(--mute);margin-top:14px;}
-.exp{margin-top:30px;border:1px solid var(--line2);border-radius:14px;overflow:hidden;}
-.exp:first-of-type{margin-top:26px;}
-.exp-h{padding:19px 26px;font-weight:700;font-size:19px;color:#fff;background:var(--panel);}
-.exp-h .cat{color:var(--accent);font-weight:500;font-size:13px;margin-right:8px;letter-spacing:.01em;}
-.exp-r{display:grid;grid-template-columns:96px 1fr;border-top:1px solid var(--line);}
-.exp-r .lab{padding:18px 18px;font-weight:500;font-size:14px;color:var(--accent);background:rgba(155,140,255,.05);border-right:1px solid var(--line);}
-.exp-r .val{padding:18px 26px;font-size:16px;color:#d6d4e0;line-height:1.85;}
-.exp-r .val ul{list-style:none;margin:0;padding:0;}
-.exp-r .val li{padding:5px 0 5px 15px;position:relative;font-size:15.5px;color:#c6c4d4;line-height:1.75;}
-.exp-r .val li::before{content:'';position:absolute;left:0;top:11px;width:5px;height:5px;border-radius:2px;background:var(--accent);}
-.exp-r .val li b{color:#fff;font-weight:500;}
-@media(max-width:680px){.exp-r{grid-template-columns:1fr;}.exp-r .lab{border-right:none;border-bottom:1px solid var(--line);}}
-.more{font-size:15px;color:var(--mute);margin-top:26px;padding-left:2px;}
-
-/* capability */
-.honest-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}@media(max-width:760px){.honest-row{grid-template-columns:1fr;}}
+/* cards / grids */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:8px;}
+@media(max-width:760px){.grid2{grid-template-columns:1fr;}}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px;}
-.honest-col h3{font-size:14px;letter-spacing:.04em;margin-bottom:14px;font-weight:500;}
-.tick{color:#5ad19a;} .cross{color:#ff7a8a;}
-ul.clean{list-style:none;margin:6px 0;} ul.clean li{padding:7px 0 7px 20px;position:relative;font-size:15px;color:#cfcdda;line-height:1.7;}
-ul.clean li::before{content:'';position:absolute;left:0;top:14px;width:6px;height:6px;border-radius:2px;background:var(--accent);}
+.card h3{color:#fff;} .card p{font-size:15px;color:#aaa8b8;margin:5px 0;line-height:1.7;}
+.card .ic{font-size:20px;margin-bottom:12px;display:block;}
 
+.rowlist{margin-top:10px;}
+.rowlist .r{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:16px 0;border-bottom:1px solid var(--line);}
+.rowlist .r:last-child{border-bottom:none;}
+.rowlist .k{font-weight:500;color:#fff;font-size:15px;}
+.rowlist .v{color:#b4b2c2;font-size:15px;}
+.rowlist .v b{color:#cfcdda;font-weight:500;}
+
+/* project blocks (직접 만든 자동화) */
+.proj{margin-top:38px;}
+.proj:first-of-type{margin-top:26px;}
+.proj h3{color:#fff;font-size:18.5px;display:flex;align-items:baseline;gap:11px;flex-wrap:wrap;margin-bottom:0;}
+.proj h3 .cap{color:var(--accent);font-size:12.5px;font-weight:500;letter-spacing:.02em;}
+.proj .sum{font-size:15.5px;color:#d2d0dc;margin:10px 0 4px;line-height:1.75;}
+.proj .rowlist .r{padding:11px 0;grid-template-columns:88px 1fr;gap:18px;}
+.proj .rowlist .k{font-size:13.5px;color:var(--accent);font-weight:500;}
+.proj .rowlist .v{font-size:14.5px;color:#b4b2c2;line-height:1.7;}
+.cat-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:64px 0 4px;padding-bottom:12px;border-bottom:1px solid var(--line2);}
+.cat-head .badge{font-weight:700;font-size:15px;color:var(--accent);letter-spacing:.01em;}
+.cat-head .desc{font-size:13.5px;color:var(--mute);font-weight:500;}
+.cat-head + .proj{margin-top:18px;}
+.exp{margin-top:34px;border:1px solid var(--line2);border-radius:14px;overflow:hidden;}
+.exp:first-of-type{margin-top:28px;}
+.exp-h{padding:19px 26px;font-weight:700;font-size:19.5px;color:#fff;background:var(--panel);}
+.exp-r{display:grid;grid-template-columns:132px 1fr;border-top:1px solid var(--line);}
+.exp-r .lab{padding:20px 18px;font-weight:500;font-size:14.5px;color:var(--accent);background:rgba(155,140,255,.05);border-right:1px solid var(--line);}
+.exp-r .val{padding:20px 26px;font-size:16.5px;color:#d6d4e0;line-height:1.9;}
+.exp-r .val .grp{margin-bottom:22px;}
+.exp-r .val .grp:last-child{margin-bottom:0;}
+.exp-r .val .grp>b{color:#fff;font-weight:500;font-size:16.5px;display:block;margin-bottom:8px;}
+.exp-r .val ul{list-style:none;margin:0;padding:0;}
+.exp-r .val li{padding:5px 0 5px 16px;position:relative;font-size:16px;color:#c6c4d4;line-height:1.78;}
+.exp-r .val li::before{content:'·';position:absolute;left:3px;top:4px;color:var(--accent);font-weight:700;}
+@media(max-width:680px){.exp-r{grid-template-columns:1fr;}.exp-r .lab{border-right:none;border-bottom:1px solid var(--line);}}
+
+/* screenshot */
+.shot{margin:22px 0;background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;}
+.shot.wide{position:relative;left:50%;transform:translateX(-50%);width:min(1180px,94vw);}
+.shot img{display:block;width:100%;height:auto;}
+.shot .ph{min-height:200px;display:flex;align-items:center;justify-content:center;color:var(--dim);
+  font-size:13px;background:repeating-linear-gradient(45deg,#141418,#141418 12px,#17171c 12px,#17171c 24px);}
+.shot figcaption{padding:15px 20px;font-size:15px;color:var(--mute);border-top:1px solid var(--line);line-height:1.65;}
+.shot figcaption b{color:var(--text);}
+.shotgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+@media(max-width:760px){.shotgrid{grid-template-columns:1fr;}}
+
+.pill{display:inline-block;font-size:12px;color:var(--accent);background:rgba(155,140,255,.1);
+  border:1px solid rgba(155,140,255,.28);border-radius:999px;padding:4px 12px;margin:0 6px 8px 0;font-weight:500;}
+.link{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(155,140,255,.35);}
+ul.clean{list-style:none;margin:10px 0;} ul.clean li{padding:7px 0 7px 20px;position:relative;font-size:15px;color:#cfcdda;}
+ul.clean li::before{content:'';position:absolute;left:0;top:14px;width:6px;height:6px;border-radius:2px;background:var(--accent);}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px;} @media(max-width:760px){.two{grid-template-columns:1fr;}}
+.honest-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}@media(max-width:760px){.honest-row{grid-template-columns:1fr;}}
+.honest-col h3{font-size:14px;letter-spacing:.04em;margin-bottom:14px;}
+.tick{color:#5ad19a;} .cross{color:#ff7a8a;}
 footer{padding:70px 0 90px;text-align:center;color:var(--mute);font-size:13px;}
 footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
 .note{font-size:12px;color:var(--dim);margin-top:6px;}
 @media print{
   *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
   @page{margin:0;}
-  section{padding:42px 0 !important;break-inside:auto;}
-  .cover{min-height:auto !important;padding:60px 0 !important;break-after:page;}
-  .exp,.card{break-inside:avoid;}
+  section{padding:46px 0 !important;break-inside:auto;}
+  .cover{min-height:auto !important;padding:64px 0 !important;break-after:page;}
+  section:nth-of-type(4){break-before:page;}
+  section:last-of-type{break-inside:avoid;}
+  .card,.exp,.shot,.rowlist .r,.grid2,.proj{break-inside:avoid;}
+  .shot.wide{left:auto;transform:none;width:100%;break-inside:avoid;}
+  .shot.wide img{max-height:700px;object-fit:contain;background:var(--bg);}
 }
 </style>
 </head>
 <body>
 
-<!-- COVER -->
-<section class="cover"><div class="wrap">
-  <div class="eyebrow">남병준 · AI 자동화 · 에이전트 엔지니어</div>
-  <h1>필요한 자동화는,<br><em class="k">직접 만들어</em> 왔습니다.</h1>
-  <p class="sub">
-    코딩을 정식으로 배운 적은 없지만, 약 6개월 동안 투자와 일상의 반복 작업을 자동화하며 프로젝트를 19개 만들었습니다. 아래는 그중 직무와 가까운 것들을 골라, 각각 "왜 만들었고 · 어떻게 만들었고 · 무엇을 효율적으로 바꿨는지"로 정리한 것입니다.
-  </p>
-  <div class="stats">
-    <div class="stat"><div class="num">19</div><div class="lab">직접 만든 자동화 프로젝트</div></div>
-    <div class="stat"><div class="num">약 6개월</div><div class="lab">집중 개발 기간</div></div>
-    <div class="stat"><div class="num">10여 종</div><div class="lab">외부 API 연동 · REST·WebSocket·SDK</div></div>
-  </div>
-  <div class="id"><span>남병준</span><span>web3kendrick@gmail.com</span></div>
-</div></section>
+<!-- HEADER -->
+<header style="padding:56px 0 30px;border-bottom:1px solid var(--line);"><div class="wrap">
+  <div style="font-weight:700;font-size:30px;color:#fff;letter-spacing:-.02em;">남병준</div>
+  <div style="color:var(--mute);font-size:15.5px;margin-top:9px;">AI 자동화 · 에이전트 엔지니어 &nbsp;·&nbsp; web3kendrick@gmail.com</div>
+</div></header>
 
-<!-- 01 프로젝트 -->
+<!-- 01 주요 자동화 프로젝트 -->
 <section><div class="wrap">
   <div class="tag"><span class="n">01</span><span class="t">주요 자동화 프로젝트</span><span class="l"></span></div>
-  <h2>사람이 다 볼 수 없는 일을<br><em>대신 보고 처리하게 만들었습니다.</em></h2>
-  <p class="lead">공통적으로 "사람이 실시간으로 전부 확인·판단하기 어려운 일"에서 병목을 찾아, 규칙이 분명한 건 코드로, 판단이 필요한 건 AI로 나눠 자동화했습니다.</p>
+  <h2>직접 만든 자동화 프로젝트와<br><em>관련 실무 경험</em>입니다.</h2>
+  <p class="lead">약 6개월간 만든 자동화 프로젝트 중 직무와 가까운 것들과, 회사의 사내 업무를 가정해 만든 업무 자동화 PoC를 함께 정리했습니다. 이어서 자동화의 출발점이 된 메타플라이어 경험과 크립토 리서치·콘텐츠 경험을 담았습니다.</p>
 
   <div class="exp">
-    <div class="exp-h"><span class="cat">[개인 프로젝트]</span>Claude 기반 자율 의사결정 에이전트</div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">사람이 다 보고 판단할 수 없는 수십 개 시장을 Claude가 분석·판단하고, 검증과 안전장치를 거쳐 자동 실행하게 만들었습니다. AI를 '의사결정 두뇌'로 쓰되 그대로 믿지 않고 가드레일로 감싸는 구조를 직접 설계했습니다.</div></div>
+    <div class="exp-h">[개인 프로젝트] Claude 기반 예측 시장 분석 에이전트</div>
+    <div class="exp-r"><div class="lab">기간</div><div class="val">2026.02 ~ 2026.03</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">활성 이벤트 약 100개 중 상위 20개 시장을 Claude가 주기적으로 분석하고, 조건에 맞는 주문안을 DRY_RUN으로 실행하는 흐름을 만들었습니다. 초기 검증 기록에는 분석 954회와 모의 주문 1,353건이 남아 있습니다. 모니터 앞에서 계속 확인하던 전략을 자동으로 검증하고 결과만 확인하는 형태로 바꿔, 검증에 드는 시간을 줄였습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
-      <li><b>왜</b> · 대상이 너무 많아 사람이 일일이 분석·판단할 수 없었습니다. AI에 판단을 맡기되 실행은 통제해야 했습니다</li>
-      <li><b>어떻게</b> · 30분마다 후보 약 100개를 상위 20개로 필터 → Claude API로 판단을 JSON으로 받음 → 유효성·예산 한도 검증으로 잘못된 결정 거부 → 모의/실행 분기 → 텔레그램 보고</li>
-      <li><b>결과</b> · 모의 모드로 사이클을 안전하게 검증하며 운영, 판단·결과를 로그로 남겨 다시 확인 가능</li>
-      <li><b>개선</b> · 하나하나 열어 보고 판단하던 걸 AI가 자동으로 훑어 상위만 추려 판단 → 사람이 안 붙어 있어도 돌아가게. AI를 그냥 믿지 않고 검증·한도로 감싼 설계</li>
+      <li><b>배경</b> · 활성 시장이 많아 사람이 일정한 주기로 모두 확인하고 판단하기 어려웠습니다</li>
+      <li><b>구현</b> · 활성 이벤트 약 100개를 불러온 뒤 거래량과 유동성 기준으로 20개 시장을 추려 포트폴리오와 함께 Claude API에 전달하고, 매매 의견을 JSON으로 받았습니다</li>
+      <li><b>검증과 개선</b> · 초기 거래 표본 14건의 p-value는 0.53이었습니다. p-value는 결과가 우연으로도 나올 수 있는지 보는 값이라, 이 수치만으로는 수익성이 검증됐다고 판단하지 않았습니다. 금액·예산 한도를 벗어난 답은 코드에서 거부하고, 판단 과정과 모의 주문 결과는 실행 로그로 남겨 다시 확인할 수 있게 했습니다</li>
     </ul></div></div>
   </div>
 
   <div class="exp">
-    <div class="exp-h"><span class="cat">[개인 프로젝트]</span>실시간 거래소·온체인 이상거래 탐지 시스템</div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">여러 거래소와 블록체인에서 이상거래·시장 조작 신호를 실시간으로 감지하는 시스템을 만들어 서버에서 24시간 운영하고 있습니다. 감지한 신호를 실제 결과로 채점해, 성과가 낮은 신호는 자동으로 걸러지도록 만들었습니다.</div></div>
+    <div class="exp-h">[개인 프로젝트] 인사이더·이상거래 감지 봇</div>
+    <div class="exp-r"><div class="lab">기간</div><div class="val">2026.01 ~ 2026.05</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">누적 거래 약 34,446건을 수집해 지갑 이력과 베팅 집중도, 시장 상황을 기준으로 이상 징후를 선별했습니다. 전체 거래를 일일이 확인하는 대신 점수와 판단 근거가 붙은 신호만 검토할 수 있게 해, 모니터링에 쓰는 시간을 줄였습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
-      <li><b>왜</b> · 이상 신호가 여러 거래소·체인·토큰에 짧게 흩어져 발생해, 사람이 실시간으로 전수 감시하기 어려웠습니다</li>
-      <li><b>어떻게</b> · WebSocket으로 650여 개 종목을 실시간 수집 → 가격 이상·대량 자금 이동·지갑 집중도 등 10여 종 신호를 통합 감지 → 여러 신호가 겹치면 확증으로 승격 → 텔레그램 알림</li>
-      <li><b>결과</b> · 서버에서 24시간 안정 운영 (초기의 WebSocket 잦은 끊김을 비동기 구조로 근본 해결)</li>
-      <li><b>개선</b> · 신호를 그냥 믿지 않고 실제 가격 결과로 승률·기대값을 채점해, 검증된 신호만 알림을 보내고 성과가 나쁜 신호는 자동 차단 → "맞는 신호만 남는" 자가교정 구조</li>
+      <li><b>배경</b> · 이상 패턴을 보려면 거래 내역과 지갑 이력, 베팅 집중도, 시장 상황을 함께 확인해야 했습니다. 사람이 매번 이 과정을 반복하기에는 시간이 많이 들고, 거래가 쌓일수록 놓치는 신호가 생길 수 있었습니다</li>
+      <li><b>구현</b> · WebSocket으로 거래를 수집하고 지갑 생성 시점·베팅 집중도·시장 상황·지갑 간 움직임을 합쳐 0~100점으로 계산했습니다</li>
+      <li><b>검증과 개선</b> · 공개된 인사이더 사례 5건에서 반복된 특징을 감지 기준에 반영했고, 신호별 점수와 판단 근거를 SQLite에 기록해 기준을 다시 확인할 수 있게 했습니다. 실제 감지한 인사이더성 신호는 일부 사용자에게 공유하는 소규모 알림 서비스로 운영했습니다</li>
     </ul></div></div>
   </div>
 
   <div class="exp">
-    <div class="exp-h"><span class="cat">[개인 프로젝트]</span>회사 업무 자동화 PoC — 사내 조회 에이전트</div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">회사의 사내 업무를 가정해, 자연어로 물으면 데이터를 조회해 답하는 에이전트와 반복 업무 자동화(안전재고 알림·입금 매칭·전표 초안)를 만들었습니다. 정답을 정한 평가 5건으로 검증해 모두 통과했습니다.</div></div>
+    <div class="exp-h">[개인 프로젝트] 델타뉴트럴 트레이딩 봇</div>
+    <div class="exp-r"><div class="lab">기간</div><div class="val">2026.01 ~ 2026.05</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">predict.fun과 Polymarket의 약 200개 시장 후보를 함께 감시하고, 가격 차이가 있는 시장에서 한쪽 거래가 체결되면 반대편 거래소에서 헤지를 시도해 델타를 줄이는 흐름을 만들었습니다. 가격 차이와 보상 조건을 함께 보며 기대값이 양수인(EV+) 상황을 찾았고, 거래 보상 조건을 맞추는 포인트 파밍 운영에 실제 사용했습니다. 이 과정에서 주문·체결·헤지·복구가 이어지는 자동화 흐름을 직접 다뤘습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
-      <li><b>왜</b> · 회사엔 사람이 반복하는 조회·확인·대조 업무가 많습니다. 규칙이 분명한 일과 판단이 필요한 일을 나눠 자동화하고 싶었습니다</li>
-      <li><b>어떻게</b> · 안전재고 확인·입금 대조처럼 규칙이 분명한 일은 코드로, 자유롭게 들어오는 질문은 에이전트가 조회 도구로 처리. 실제 ERP·협업툴은 데모 제한이 있어 Airtable·Slack에 같은 구조를 구현</li>
-      <li><b>결과</b> · 합성 데이터로 대화형 조회 · 반복 업무 자동화 · 여러 분석을 모으는 아침 브리핑까지 동작 확인</li>
-      <li><b>개선</b> · AI가 없는 내용을 지어내지 못하게 조회 전용 도구만 주고, 발주·입금 같은 결정은 사람이 승인하도록 범위를 나눔 (AI가 맡을 일과 사람이 맡을 일을 구조로 분리)</li>
+      <li><b>배경</b> · 델타뉴트럴 전략은 시장 방향을 맞히기보다, 가격 차이가 있는 두 거래소에서 서로 반대 방향의 거래를 잡아 가격 변동 위험을 줄이는 방식입니다. 다만 가격 차이는 금방 사라지고 한쪽 주문만 체결되면 위험이 남기 때문에, 사람이 수동으로 따라가기 어려웠습니다</li>
+      <li><b>구현</b> · predict.fun SDK, Polymarket CLOB, Polygon RPC를 연결하고 주문·체결·헤지·복구 과정을 비동기로 처리했습니다</li>
+      <li><b>운영과 개선</b> · 약 4개월 동안 델타뉴트럴 방식의 포인트 파밍을 운영하며 EV+ 기회를 실제 운영에 활용했습니다. 158개 설정 항목과 3시간·12시간 관찰 사이클, 약 8,773줄의 관찰 로그를 바탕으로 설정과 복구 로직을 반복해서 조정했습니다</li>
     </ul></div></div>
   </div>
 
   <div class="exp">
-    <div class="exp-h"><span class="cat">[개인 프로젝트]</span>화면 인식 기반 게임 자동화</div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">조작할 API가 없는 환경에서 반복 조작을 '화면을 보고' 자동 처리하게 만들었습니다. 캡처→인식→조작 파이프라인과, 기기마다 다른 환경(해상도·DPI)을 견디는 설정 구조를 직접 설계했습니다.</div></div>
+    <div class="exp-h">[개인 프로젝트] 화면 인식 기반 게임 자동화</div>
+    <div class="exp-r"><div class="lab">기간</div><div class="val">2026.05 ~ 2026.06 (18일 집중 개발)</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">18일 동안 코드 10,710줄, Git 커밋 267개 규모로 개발했고, 설정을 분리해 PC와 노트북에서 같은 코드가 동작하도록 맞췄습니다. 실제 사용 중 발견한 입력·포커스·오탐 문제에는 안정화 패치 8개를 적용했습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
-      <li><b>왜</b> · 반복 조작이 필요한데 조작할 API가 없어, 화면을 직접 읽어 상황에 맞게 움직이는 자동화가 필요했습니다</li>
-      <li><b>어떻게</b> · 화면 캡처 → OpenCV 템플릿 매칭으로 요소 인식(정확도 0.65~0.85) → 좌표 기반 자동 조작 + 위험 감지 시 즉시 정지. 설정 계층을 분리해 PC·노트북 2대에서 같은 코드로 운영</li>
-      <li><b>결과</b> · 2대 기기에서 장시간 무인 운영</li>
-      <li><b>개선</b> · 똑같은 반복 조작에 들던 사람 손을 0으로. 창 좌표·인식 기준값을 실측으로 잡아 개입 없이 유지되게 안정화</li>
+      <li><b>배경</b> · 반복 조작에 계속 시간을 쓰기 어려워 화면을 직접 읽고 상황에 맞게 움직이는 자동화가 필요했습니다. 조작할 API가 없었기 때문에 이미지 인식으로 위치와 상태를 판단해야 했고, PC와 노트북의 화면 차이 같은 변수도 함께 처리해야 했습니다</li>
+      <li><b>구현</b> · 템플릿 매칭과 HSV BLOB 감지를 함께 사용하고, 창 크기를 1298×767로 맞춘 뒤 좌표를 0~1 범위로 정규화했습니다</li>
+      <li><b>결과와 개선</b> · 실제 사용 중 반복 조작을 안정적으로 맡길 수 있는 수준까지 조정했습니다. 템플릿 매칭 기준값은 기기와 화면에 따라 0.65~0.85로 나누고, 화면에서 측정한 이동 경계도 왼쪽 0.04·오른쪽 0.77로 따로 적용했습니다</li>
     </ul></div></div>
   </div>
 
   <div class="exp">
-    <div class="exp-h"><span class="cat">[게임잼 출품]</span>메이플스토리 IP 2D 서바이버 게임</div>
+    <div class="exp-h">[게임잼 출품] 메이플스토리 IP 2D 서바이버 게임</div>
+    <div class="exp-r"><div class="lab">기간</div><div class="val">2026.06 (MapleStory Vibe Camp 게임잼)</div></div>
     <div class="exp-r"><div class="lab">성과</div><div class="val">넥슨 메이플스토리 공식 IP 게임잼에 2D 서바이버 게임을 만들어 출품·배포했습니다. 이동·자동공격·레벨업 성장·보스·리더보드까지 갖춘 한 판 완결형 게임을 구현했습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
-      <li><b>왜</b> · 공식 IP 애셋과 플랫폼이 주어진 게임잼에서, 짧은 시간에 "30초 안에 빠져들고 한 판 더 하게" 되는 완결형 게임을 목표로</li>
-      <li><b>어떻게</b> · 자동공격 투사체·군집 스폰·레벨업 랜덤 3택1·보스·영구강화 상점을 구현. 게임 엔진(Phaser)으로 렌더하고 게임서버로 점수 리더보드를 연동</li>
-      <li><b>결과</b> · 실제 플랫폼에 배포해 플레이 가능한 상태로 제출</li>
-      <li><b>개선</b> · 여러 차례 플레이테스트로 조작감·밸런스·UI를 다듬어, 붙잡고 한 판 더 하게 되는 흐름으로 완성</li>
+      <li><b>배경</b> · 공식 IP 애셋과 플랫폼이 주어진 게임잼에서, 짧은 시간에 "30초 안에 빠져들고 한 판 더 하게" 되는 완결형 게임을 목표로 했습니다</li>
+      <li><b>구현</b> · 자동공격 투사체·군집 스폰·레벨업 랜덤 3택1·보스·영구강화 상점을 구현하고, 게임 엔진(Phaser)으로 렌더하며 게임서버로 점수 리더보드를 연동했습니다</li>
+      <li><b>결과와 개선</b> · 실제 플랫폼에 배포해 플레이 가능한 상태로 제출했습니다. 여러 차례 플레이테스트로 조작감·밸런스·UI를 다듬어 붙잡고 한 판 더 하게 되는 흐름으로 완성했습니다</li>
     </ul></div></div>
   </div>
 
   <div class="exp">
-    <div class="exp-h"><span class="cat">[개인 프로젝트]</span>델타뉴트럴 트레이딩 봇</div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">24시간 떠 있는 차익 기회를 사람이 계속 볼 수 없으니 봇이 대신 감시·실행·헤지하게 만들었고, 원하는 대로 돌 때까지 끈질기게 튜닝해 안정화했습니다.</div></div>
+    <div class="exp-h">[개인 프로젝트] 거래소·온체인 신호 감지 스캐너</div>
+    <div class="exp-r"><div class="lab">기간</div><div class="val">2026.03 ~ 2026.04</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">가격 차이·급등락·디페깅·상장·거래소 상태·블록 지연·펀딩비를 한곳에서 감지하고 알리도록 만들었습니다. 34개 체인의 약 190개 토큰과 1,200개 이상 무기한선물 종목까지 확인하도록 범위를 넓혔으며, 자동매매는 구현하지 않았습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
-      <li><b>왜</b> · 차익 기회는 짧고 불규칙해 수동으로는 놓치기 쉬워, 자동 감시·실행·헤지가 필요했습니다</li>
-      <li><b>어떻게</b> · 두 거래소 API(REST·WebSocket)로 실시간 호가를 추적 → 주문·체결을 감지 → 체결되면 반대 거래소에서 다단계로 헤지 (asyncio, 약 1,700줄 엔진)</li>
-      <li><b>결과</b> · 설정값을 백 번 넘게 바꿔가며 안정화, 약 200개 시장에서 운영</li>
-      <li><b>개선</b> · 몇 초~분이면 사라지는 기회를 수동으론 못 잡으니, 두 거래소를 실시간으로 묶어 자동 진입·헤지로 사람 없이 처리</li>
+      <li><b>배경</b> · 거래소와 체인, 토큰, 선물 종목을 동시에 봐야 했고 가격 차이·급등락·디페깅·블록 지연처럼 확인할 신호도 여러 갈래였습니다. 사람이 화면을 오가며 변화 시점을 맞추는 방식으로는 범위와 속도를 따라가기 어려워 자동화가 필요했습니다</li>
+      <li><b>구현</b> · 거래소 WebSocket과 공개 API, web3.py로 데이터를 모으고 가격 갭·스파이크·디페깅·블록 지연을 나눠 감지했습니다</li>
+      <li><b>결과와 한계</b> · 여러 거래소와 체인에 흩어져 있던 신호를 한곳에서 모아 우선순위가 높은 항목만 확인할 수 있게 했습니다. 감지한 신호와 판단 근거는 SQLite에 저장했고, 34개 체인 가운데 21개 EVM 체인은 블록 생성 상태도 확인했습니다. V1은 조회·기록·알림까지 구현했고 자동매매는 제외했습니다</li>
     </ul></div></div>
   </div>
 
   <div class="exp">
-    <div class="exp-h"><span class="cat">[개인 프로젝트]</span>인사이더·이상거래 감지 봇</div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">실시간으로 쏟아지는 모든 거래를 사람이 볼 수 없으니, 이상·인사이더 패턴을 자동 감지·점수화해 등급별로 알림하게 만들었습니다. 실제 인사이더 사례 5건에서 공통 패턴을 역으로 뽑아 신호로 만들었습니다.</div></div>
+    <div class="exp-h">[업무 자동화 PoC] ERP·협업툴 사내 업무 자동화 + 대화형 에이전트</div>
+    <div class="exp-r"><div class="lab">기간</div><div class="val">2026.05 ~ 2026.06</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">국내 중소 제조·유통사의 ERP·협업툴 업무를 가정해, Slack에서 재고·미수금을 조회하는 에이전트와 안전재고 알림·입금 매칭·구매전표 초안 작성을 구현했습니다. 정답을 계산해 만든 평가 질문 5개로 조회 도구 선택과 답변 추출을 테스트했고 모두 통과했습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
-      <li><b>왜</b> · 모든 거래를 수동으로 감시할 수 없어, 자동 수집·이상 감지가 필요했습니다</li>
-      <li><b>어떻게</b> · WebSocket으로 실시간 거래 수집 → 4개 신호(지갑 신선도·베팅 집중도·시장 맥락·지갑 군집)로 0~100 점수화 → 등급별 알림</li>
-      <li><b>결과</b> · 서버에서 감지·알림, 누적 약 34,446건 분석</li>
-      <li><b>개선</b> · 전체 거래를 다 볼 수 없는데, 실시간 전수 스캔 + 0~100 자동 점수화로 '볼 가치 있는 것'만 골라 올려줌</li>
-    </ul></div></div>
-  </div>
-
-  <p class="more">이 외에도 알림 봇, 데이터 수집·자동화 스크립트 등 여러 프로젝트를 만들었고, 일부는 서버에서 24시간 운영 중입니다.</p>
-
-  <div class="tag" style="margin-top:80px;"><span class="n">·</span><span class="t">자동화의 출발점이 된 실무 경험</span><span class="l"></span></div>
-
-  <div class="exp">
-    <div class="exp-h"><span class="cat">[㈜메타플라이어 · 1년 1개월]</span>고객 맞춤 마케팅 자동화 · 데이터 분석</div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">고객사 업무에 맞춘 마케팅 자동화 시나리오 3건을 만들었습니다. 메일 확인·링크 클릭·설문 응답에 따라 후속 문자와 메일이 달라지도록 구성하고, GA·GTM·Clarity·Looker Studio 데이터를 대시보드에서 확인할 수 있게 정리했습니다.</div></div>
-    <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
-      <li>세미나·교육 안내, 기업 소식 뉴스레터, 행사 전후 후속 연락처럼 고객사마다 필요한 업무를 자동화 시나리오로 구성</li>
-      <li>메일 열람·링크 클릭·설문 응답에 따라 확인 안내·참여 독려·후속 메일이 이어지도록 조건을 나눔</li>
-      <li>유입·가입 과정을 데이터로 확인하고, 이상 가입 패턴이 보이면 원인을 찾아 운영에 반영</li>
+      <li><b>배경</b> · 특정 회사를 정하지 않고, 중소 제조·유통사에서 흔한 ERP·협업툴 반복 업무를 가정했습니다. 실제 ERP(이카운트)와 협업툴(Flow)은 데모 계정에서 API 연동이 제한되어 Airtable과 Slack으로 같은 구조를 구현했습니다</li>
+      <li><b>구현</b> · 안전재고 확인·입금 대조처럼 규칙이 분명한 일은 코드로 처리하고, 자유롭게 들어오는 질문만 에이전트가 맡도록 나눴습니다. 조회 전용 도구만 연결해 답이 조회 결과에만 근거하게 했고, 확인되지 않으면 모른다고 답하며 발주·입금처럼 결정이 필요한 일은 사람이 승인하도록 했습니다</li>
+      <li><b>결과</b> · 앞선 대화의 거래처와 맥락을 잇는 대화형 조회, 재고·재무·미수 분석을 병렬 실행해 정해진 시각에 팀 채널로 보내는 멀티에이전트 브리핑까지 구현했습니다. 합성 데이터로 만든 사내 업무 대시보드와 Slack 대화형 에이전트로 테스트했습니다</li>
     </ul></div></div>
   </div>
 
   <div class="exp">
-    <div class="exp-h"><span class="cat">[크립토 마케팅 프리랜서]</span>리서치 · 콘텐츠 · 커뮤니티</div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">새로운 기술과 개념을 빠르게 조사해 이해할 수 있는 콘텐츠로 풀어내고, 온라인 커뮤니티를 개설·운영했습니다. 낯선 분야를 빠르게 익혀 남에게 설명 가능한 수준으로 만드는 일을 오래 해왔습니다.</div></div>
+    <div class="exp-h">[㈜메타플라이어] 고객 맞춤 마케팅 자동화 · 데이터 분석</div>
+    <div class="exp-r"><div class="lab">기간</div><div class="val">2023.07 ~ 2024.07 (1년 1개월)</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">고객사 업무에 맞춘 마케팅 자동화 시나리오 3건을 만들었습니다. 메일 확인·링크 클릭·설문 응답에 따라 후속 문자와 메일이 달라지도록 구성했고, GA·GTM·Clarity·Looker Studio 데이터를 대시보드에서 확인할 수 있게 정리했습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
-      <li>새로 등장하는 기술·프로젝트의 구조와 배경을 조사해, 독자가 이해할 수 있는 콘텐츠로 제작</li>
-      <li>온라인 커뮤니티 개설·운영, 프로젝트·파트너와 협업</li>
-      <li>기술이 쉴 새 없이 바뀌는 환경에서 낯선 개념을 빠르게 따라잡는 습관을 들임</li>
+      <li>세미나·교육 신청 안내, 기업 소식 뉴스레터, 행사 전후 후속 연락처럼 고객사마다 필요한 업무를 자동화 시나리오로 구성했습니다</li>
+      <li>메일을 열었는지, 링크를 눌렀는지, 설문에 응답했는지에 따라 확인 안내·참여 독려·당일 알림·후속 메일이 이어지도록 조건을 나눴습니다</li>
+      <li>GA·GTM·Clarity·Looker Studio로 유입과 가입 과정을 확인하고, 이상 가입 패턴이 발견되면 원인을 찾아 운영에 반영했습니다</li>
+    </ul></div></div>
+  </div>
+
+  <div class="exp">
+    <div class="exp-h">[크립토 마케팅 프리랜서] 리서치 · 콘텐츠 · 커뮤니티</div>
+    <div class="exp-r"><div class="lab">기간</div><div class="val">2021.10 ~ 2026.01</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">영문과 국문 장문 분석글 약 1,100건을 발행했고, 최근 1년 기준 계정 누적 노출 약 1,000만 회와 좋아요 7만 회 이상을 기록했습니다. 0G Labs 한국 커뮤니티는 개설 후 6개월 동안 6천 명 이상 규모로 운영했습니다.</div></div>
+    <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
+      <li>0G·Sentient·Allora·Virtuals·Kaito 등 AI 관련 프로젝트의 기술, 토크노믹스, 시장 구조를 조사해 콘텐츠로 만들었습니다</li>
+      <li>좋아요 100회 이상을 기록한 게시물은 156건이었고, 게시물별 반응을 보며 주제와 구성을 조정했습니다</li>
+      <li>프로젝트·거래소·커뮤니티와 협업하며 기술을 조사하고 독자가 이해할 수 있는 내용으로 풀어 쓰는 일을 맡았습니다</li>
     </ul></div></div>
   </div>
 </div></section>
 
-<!-- 02 역량과 한계 -->
+<!-- 02 할 수 있는 것 · 기술 스택 -->
 <section style="border-bottom:none;"><div class="wrap">
-  <div class="tag"><span class="n">02</span><span class="t">역량과 한계</span><span class="l"></span></div>
-  <h2>할 수 있는 것과 배우고 있는 것을<br><em>구분해서 정리했습니다.</em></h2>
+  <div class="tag"><span class="n">02</span><span class="t">할 수 있는 것 · 기술 스택</span><span class="l"></span></div>
+  <h2>무엇을 <em>어떻게 다뤘는지</em> 정리했습니다.</h2>
   <div class="honest-row" style="margin-top:26px;">
     <div class="card honest-col">
       <h3 class="tick">할 수 있는 것</h3>
       <ul class="clean">
         <li>Claude Code·Codex 기반 작업 흐름으로 약 6개월간 자동화 프로젝트 19개 제작</li>
-        <li>LLM이 질문에 맞는 조회 도구를 스스로 선택하고 결과를 이어 처리하는 tool-use 에이전트 구현</li>
+        <li>LLM이 질문에 맞는 도구를 스스로 선택하고 결과를 이어 처리하는 tool-use 에이전트 구현</li>
         <li>"어디에 코드를 쓰고 어디에 AI를 쓸지" 병목을 보고 판단하는 설계</li>
         <li>WebSocket으로 수백 개 종목을 실시간 수집·처리 (asyncio 비동기)</li>
-        <li>REST·WebSocket·SDK 방식으로 외부 API 10여 종 연동</li>
         <li>OpenCV 기반 화면 인식과 좌표 자동화</li>
-        <li>Python을 주로 쓰고 JavaScript·PowerShell을 보조로 활용</li>
+        <li>REST·WebSocket·SDK 방식으로 외부 API 10여 종 연동</li>
+        <li>서버에서 봇을 24시간 운영 (systemd·cron·알림 연동)</li>
       </ul>
     </div>
     <div class="card honest-col">
-      <h3 class="cross">배우고 있는 것</h3>
+      <h3 style="color:var(--accent);">기술 스택</h3>
       <ul class="clean">
-        <li>LangChain·CrewAI 같은 정식 오케스트레이션 프레임워크를 실무 프로젝트에 적용해 본 경험은 아직 없습니다</li>
-        <li>회사에서 실제로 쓰는 ERP·협업툴의 운영 환경은 처음입니다</li>
-        <li>외부 사용자가 있는 서비스의 팀 개발·운영 경험은 없습니다</li>
+        <li><b>언어</b> · Python(주력) · JavaScript · PowerShell</li>
+        <li><b>AI · LLM</b> · Claude API · Claude Code · Codex · tool-use 에이전트</li>
+        <li><b>비동기 · 실시간</b> · asyncio · WebSocket 대량 스트림</li>
+        <li><b>데이터</b> · SQLite · Airtable API</li>
+        <li><b>Vision</b> · OpenCV (템플릿 매칭 · HSV BLOB)</li>
+        <li><b>게임</b> · Phaser · HTML5 Canvas</li>
+        <li><b>연동 · 인프라</b> · Slack · 텔레그램 API · systemd · cron · GitHub</li>
       </ul>
     </div>
   </div>
@@ -237,5 +276,16 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
   <div class="note">2026 · AI 자동화 · 에이전트 엔지니어 포트폴리오</div>
 </footer>
 
+<script>
+// 스샷 이미지가 아직 없으면 깨진 아이콘 대신 안내 박스만, 있으면 안내 박스 숨김
+document.querySelectorAll('.shot img').forEach(function(img){
+  var ph = img.parentElement.querySelector('.ph');
+  function ok(){ if(ph) ph.style.display='none'; }
+  function err(){ img.style.display='none'; }
+  img.addEventListener('load', ok);
+  img.addEventListener('error', err);
+  if(img.complete){ img.naturalWidth>0 ? ok() : err(); }
+});
+</script>
 </body>
 </html>
