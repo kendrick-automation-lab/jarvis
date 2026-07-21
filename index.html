@@ -122,18 +122,18 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
   </div>
 
   <div class="exp">
-    <div class="exp-h"><span class="cat">[개인 프로젝트]</span>왜 오르는지까지 짚는 신규 토큰 신호 봇</div>
+    <div class="exp-h"><span class="cat">[개인 프로젝트]</span>멀티체인 DEX 신규 토큰 신호 봇</div>
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.07 ~ 현재 (서버 운영 중)</div></div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">5개 체인의 신규 토큰을 감지하는 데서 그치지 않고, "왜 오르는지"를 화제와 주요 지갑·계정 움직임으로 짚어 설명하는 개인용 봇입니다.</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">Solana·Base·BSC·Ethereum 등의 DEX 신규 토큰을 실시간 감지하고, X(트위터) API로 KOL·스마트머니 계정의 움직임을 추적해 "왜 오르는지"까지 귀속하는 개인용 봇입니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
       <li><b>배경</b> · 밈코인 시장은 새 토큰이 끊임없이 쏟아집니다. "떴다"만으로는 부족하고 "왜 떴는지"까지 알아야 판단할 수 있었습니다</li>
-      <li><b>구현</b> · Solana·Base·BSC·Ethereum 등 5개 체인의 신규 토큰을 감지하고, 화제가 된 이유와 영향력 있는 지갑·계정의 움직임을 묶어 신호로 만듭니다. 급락 위험 경보와 관심도 점수도 함께 냅니다</li>
-      <li><b>결과와 개선</b> · 텔레그램으로 개인 신호를 받고 있습니다. 일부 소스가 Cloudflare로 봇을 막아 수집이 끊기던 문제는 접근 방식을 바꿔 우회했습니다</li>
+      <li><b>구현</b> · 5개 체인의 온체인 데이터와 X 계정 신호를 함께 수집해, 토큰마다 화제성·KOL 관심도·스마트머니 유입을 합친 하입 점수를 계산합니다. 급락 직전 출구 신호도 함께 감지합니다</li>
+      <li><b>결과와 개선</b> · 주요 데이터 소스가 Cloudflare 봇 차단(JA3 지문)으로 막히자 curl_cffi로 브라우저 지문을 우회해 안정적으로 수집했습니다. 최종 신호는 텔레그램으로 받고 있습니다</li>
     </ul></div></div>
   </div>
 
   <div class="exp">
-    <div class="exp-h"><span class="cat">[개인 프로젝트]</span>Claude 기반 예측 시장 분석 에이전트</div>
+    <div class="exp-h"><span class="cat">[개인 프로젝트]</span>Claude 기반 실시간 마켓 분석 에이전트</div>
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.02 ~ 2026.03</div></div>
     <div class="exp-r"><div class="lab">성과</div><div class="val">활성 이벤트 100여 개 중 거래량·유동성 상위 20개를 Claude가 주기적으로 분석해, 조건에 맞는 주문안을 DRY_RUN으로 내는 흐름을 만들었습니다. 초기 기록에 분석 954회와 모의 주문 1,353건이 남아 있습니다. 모니터 앞에서 직접 지켜보던 걸 자동으로 돌려 결과만 보게 바꿨습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
@@ -146,10 +146,10 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
   <div class="exp">
     <div class="exp-h"><span class="cat">[개인 프로젝트]</span>인사이더·이상거래 감지 봇</div>
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.01 ~ 2026.05</div></div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">거래 34,446건을 수집해 지갑 이력과 베팅 집중도, 시장 상황으로 이상 징후를 가려냈습니다. 전부 들여다보는 대신 점수와 근거가 붙은 신호만 보면 되게 했습니다.</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">거래 34,446건을 수집해 지갑 이력과 포지션 집중도, 시장 상황으로 이상 징후를 가려냈습니다. 전부 들여다보는 대신 점수와 근거가 붙은 신호만 보면 되게 했습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
       <li><b>배경</b> · 이상 패턴은 거래 내역과 지갑 이력, 시장 상황을 같이 봐야 잡힙니다. 매번 반복하기엔 손이 많이 갔고, 거래가 쌓일수록 놓치는 게 생겼습니다</li>
-      <li><b>구현</b> · WebSocket으로 거래를 모으고 지갑 생성 시점과 베팅 집중도, 시장 상황, 지갑 간 움직임을 합쳐 0~100점으로 계산했습니다</li>
+      <li><b>구현</b> · WebSocket으로 거래를 모으고 지갑 생성 시점과 포지션 집중도, 시장 상황, 지갑 간 움직임을 합쳐 0~100점으로 계산했습니다</li>
       <li><b>검증과 개선</b> · 공개된 인사이더 사례 5건에서 반복되는 특징을 감지 기준에 반영했습니다. 점수와 근거를 SQLite에 함께 저장해 신호마다 왜 그렇게 판정했는지 나중에 확인할 수 있고, 감지한 신호는 일부 사람들에게 공유했습니다</li>
     </ul></div></div>
   </div>
@@ -157,11 +157,11 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
   <div class="exp">
     <div class="exp-h"><span class="cat">[개인 프로젝트]</span>델타뉴트럴 트레이딩 봇</div>
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.01 ~ 2026.05</div></div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">predict.fun과 Polymarket의 시장 200여 개를 감시하며, 한쪽이 체결되면 반대 거래소에서 자동으로 헤지해 방향 위험을 줄이는 봇을 약 4개월간 실제 포인트 파밍에 운용했습니다. 설정 158개와 관찰 로그 8,773줄을 바탕으로 복구 로직을 계속 손봤습니다.</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">서로 다른 두 온체인 거래소의 시장 200여 개를 감시하며, 한쪽이 체결되면 반대 거래소에서 자동으로 헤지해 방향 위험을 줄이는 봇을 약 4개월간 운용했습니다. 설정 158개와 관찰 로그 8,773줄을 바탕으로 복구 로직을 계속 손봤습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
       <li><b>배경</b> · 가격이 어긋난 두 거래소에서 서로 반대로 걸어 방향 위험을 줄이는 방식입니다. 다만 가격 차이는 금방 사라지고 한쪽만 체결되면 위험이 남아, 수동으로는 따라가기 벅찼습니다</li>
-      <li><b>구현</b> · predict.fun SDK와 Polymarket CLOB, Polygon RPC를 붙여 주문·체결·헤지·복구를 비동기로 처리했습니다</li>
-      <li><b>운영과 개선</b> · 3시간·12시간 관찰 사이클을 돌리며 가격 차이와 보상 조건이 맞아떨어지는(EV+) 상황을 실제 파밍에 활용했습니다. 관찰 로그가 쌓일수록 복구 로직을 조금씩 다듬었습니다</li>
+      <li><b>구현</b> · 두 거래소의 SDK와 CLOB API, Polygon RPC를 붙여 주문·체결·헤지·복구를 비동기로 처리했습니다</li>
+      <li><b>운영과 개선</b> · 3시간·12시간 주기로 관찰하며 가격 차이와 보상 조건이 맞아떨어지는(EV+) 상황을 활용했습니다. 관찰 로그가 쌓일수록 복구 로직을 조금씩 다듬었습니다</li>
     </ul></div></div>
   </div>
 
@@ -193,11 +193,11 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
 
 <!-- 02 핵심 역량 · 기술 스택 -->
 <section style="border-bottom:none;"><div class="wrap">
-  <div class="tag"><span class="n">02</span><span class="t">핵심 역량 · 기술 스택</span><span class="l"></span></div>
-  <h2>제가 쌓아온 <em>역량과 쓰는 도구들</em></h2>
+  <div class="tag"><span class="n">02</span><span class="t">할 수 있는 일 · 쓰는 도구</span><span class="l"></span></div>
+  <h2>제가 <em>할 수 있는 일과 쓰는 도구</em></h2>
   <div class="honest-row" style="margin-top:26px;">
     <div class="card honest-col">
-      <h3 class="tick">핵심 역량</h3>
+      <h3 class="tick">할 수 있는 일</h3>
       <ul class="clean">
         <li>AI(Claude Code·Codex)로 필요한 자동화를 직접 만들어 왔습니다 (6개월간 19개)</li>
         <li>질문에 맞는 도구를 AI가 스스로 골라 처리하는 대화형 에이전트를 만듭니다</li>
@@ -212,16 +212,16 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
       </ul>
     </div>
     <div class="card honest-col">
-      <h3 style="color:var(--accent);">기술 스택</h3>
+      <h3 style="color:var(--accent);">쓰는 도구</h3>
       <ul class="clean">
         <li><b>언어</b> · Python(주력) · JavaScript · PowerShell</li>
         <li><b>AI · LLM</b> · Claude API · Claude Code · Codex · tool-use · 멀티에이전트</li>
         <li><b>실시간 · 비동기</b> · asyncio · WebSocket</li>
-        <li><b>데이터 · 온체인</b> · SQLite · Airtable · web3.py</li>
+        <li><b>데이터 · 온체인</b> · SQLite · Airtable · web3.py · curl_cffi</li>
         <li><b>화면 인식</b> · OpenCV · mss · win32</li>
         <li><b>게임 · 웹</b> · Phaser · HTML5 Canvas · Next.js / React</li>
         <li><b>마케팅 · 분석</b> · GA · GTM · Clarity · Looker Studio</li>
-        <li><b>연동 · 운영</b> · Slack · 텔레그램 API · systemd · cron · AWS · GitHub</li>
+        <li><b>연동 · 운영</b> · Slack · 텔레그램 · X(트위터) API · systemd · cron · AWS · GitHub</li>
       </ul>
     </div>
   </div>
