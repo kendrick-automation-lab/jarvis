@@ -113,7 +113,7 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
   <div class="exp">
     <div class="exp-h"><span class="cat">[개인 프로젝트]</span>크립토 거래소·온체인 이상거래 탐지 시스템</div>
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.07 ~ 현재 (서버 24시간 운영)</div></div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">약 2주간 이상거래 신호 2,800여 건을 감지했고, 감지한 신호를 실제 가격 결과로 4,700여 회 채점해 신호 품질을 자동 조정했습니다.</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">약 2주간 이상거래 신호 2,800여 건을 감지해 실제 가격으로 4,700여 회 채점했고, 신호를 그대로 모의 매매에 태운 페이퍼 트레이딩은 청산 684회 기준 누적 +5,100달러(평균 +1.49%)를 기록했습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
       <li><b>배경</b> · 이상 신호는 여러 거래소와 체인에 잠깐씩 나타났다 사라집니다. 이걸 사람이 눈으로 다 좇기 힘들어 자동으로 감시하게 했습니다</li>
       <li><b>구현</b> · WebSocket으로 여러 거래소의 650여 개 종목을 실시간 수집하고, 가격 이상·대량 자금 이동·지갑 집중도 등 신호 10여 종을 나눠 감지합니다. 여러 신호가 한 종목에 겹치면 더 확실한 신호로 보고 알리며, 온체인 쪽은 9개 체인의 지갑과 입금 흐름까지 확인합니다</li>
@@ -124,7 +124,7 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
   <div class="exp">
     <div class="exp-h"><span class="cat">[개인 프로젝트]</span>멀티체인 DEX 신규 토큰 신호 봇</div>
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.07 ~ 현재 (서버 운영 중)</div></div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">약 2주간 5개 체인의 신규 토큰 15만여 개를 수집해, 선별한 신호 1만 1천여 건을 텔레그램으로 발송했습니다. 지갑 거래 280만 건과 KOL 거래 41만 건의 분석 데이터를 축적했습니다.</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">약 2주간 신규 토큰 15만여 개를 걸러 신호 1,600여 건을 발송했고, 결과 추적이 끝난 신호 1,496건 중 189건이 알림 뒤 2배 이상 올랐습니다(최고 12.9배). 이 과정에서 지갑 거래 280만 건, KOL 거래 41만 건의 분석 데이터를 축적했습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
       <li><b>배경</b> · 새로 나온 토큰이 갑자기 오르는 일은 잦습니다. 다만 가격 움직임만으로는 부족하고, 오른 이유까지 파악해야 의미 있는 신호인지 가려낼 수 있었습니다</li>
       <li><b>구현</b> · Solana·Base·BSC·Ethereum 등 5개 체인의 DEX 신규 토큰을 실시간 감지하고, X(트위터)·Grok API로 KOL·스마트머니의 움직임과 화제성을 분석합니다. 토큰마다 이를 합친 하입 점수를 계산하고, 급락 직전 출구 신호도 함께 감지합니다</li>
