@@ -126,7 +126,7 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.07 ~ 현재 (서버 운영 중)</div></div>
     <div class="exp-r"><div class="lab">성과</div><div class="val">약 2주 운영하며 5개 체인의 신규 토큰 15만여 개를 수집하고, 선별한 신호 1만 1천여 건을 텔레그램으로 발송했습니다. 지갑 거래 280만 건과 KOL 거래 41만 건을 축적해 스마트머니 판별 기준으로 썼습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
-      <li><b>배경</b> · 새로 나온 토큰이 갑자기 오르는 일은 잦지만, 어떤 토큰이 올랐다는 사실만으로는 부족하고 왜 올랐는지 알아야 따라 들어갈 만한 신호인지 판단할 수 있었습니다</li>
+      <li><b>배경</b> · 새로 나온 토큰이 갑자기 오르는 일은 잦습니다. 다만 가격 움직임만으로는 부족하고, 오른 이유까지 파악해야 의미 있는 신호인지 가려낼 수 있었습니다</li>
       <li><b>구현</b> · Solana·Base·BSC·Ethereum 등 5개 체인의 DEX 신규 토큰을 실시간 감지하고, X(트위터)·Grok API로 KOL·스마트머니의 움직임과 화제성을 분석합니다. 토큰마다 이를 합친 하입 점수를 계산하고, 급락 직전 출구 신호도 함께 감지합니다</li>
       <li><b>결과와 개선</b> · 신호마다 "왜 올랐는지" 설명을 붙여 보내도록 다듬었습니다. 주요 데이터 소스가 Cloudflare 봇 차단(JA3 지문)으로 막히자 curl_cffi로 브라우저 지문을 우회해 수집을 안정화했습니다</li>
     </ul></div></div>
@@ -157,11 +157,11 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
   <div class="exp">
     <div class="exp-h"><span class="cat">[개인 프로젝트]</span>예측시장 델타뉴트럴 차익거래 봇</div>
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.01 ~ 2026.05</div></div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">predict.fun과 Polymarket 두 예측시장의 시장 200여 개를 감시하는 봇을 만들어, 델타뉴트럴 전략을 약 4개월간 시뮬레이션(모의 주문)으로 검증했습니다. 설정 158개를 튜닝하고 관찰 로그 8,773줄을 분석해 복구 로직을 개선했습니다.</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">약 4개월 동안 predict.fun과 Polymarket 시장 203개에서 가격이 어긋나는 순간마다 봇이 모의 주문을 걸어, 체결 644건과 누적 약 15만 달러 규모를 기록했습니다. 한쪽만 체결돼 위험이 남는 상황도 자동 헤지로 복구되는 것까지 검증했습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
       <li><b>배경</b> · 가격이 어긋난 두 거래소에서 서로 반대 방향으로 포지션을 잡아 방향 위험을 줄이는 전략입니다. 다만 가격 차이는 금방 사라지고 한쪽만 체결되면 위험이 남아, 수동으로는 이 타이밍을 따라가기 벅찼습니다</li>
       <li><b>구현</b> · predict.fun SDK와 Polymarket CLOB, Polygon RPC를 붙여 주문·체결·헤지·복구를 비동기로 처리했습니다</li>
-      <li><b>검증과 개선</b> · 3시간·12시간 주기로 시뮬레이션을 돌리며 가격 차이와 보상 조건이 맞아떨어지는(EV+) 상황을 포착했습니다. 관찰 로그가 쌓일수록 복구 로직을 조금씩 다듬었습니다</li>
+      <li><b>검증과 개선</b> · 3시간·12시간 주기로 시뮬레이션을 돌리며 가격 차이와 보상 조건이 맞아떨어지는(EV+) 상황을 포착했습니다. 관찰 로그 8,773줄을 분석하고 설정 158개를 조정하며 복구 로직을 다듬었습니다</li>
     </ul></div></div>
   </div>
 
