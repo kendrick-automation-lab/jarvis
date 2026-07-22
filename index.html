@@ -113,22 +113,22 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
   <div class="exp">
     <div class="exp-h"><span class="cat">[개인 프로젝트]</span>크립토 거래소·온체인 이상거래 탐지 시스템</div>
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.07 ~ 현재 (서버 24시간 운영)</div></div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">약 2주간 이상거래 신호 2,800여 건을 감지해 실제 가격으로 4,700여 회 채점했고, 신호를 그대로 모의 매매에 태운 페이퍼 트레이딩은 청산 684회 기준 누적 +5,100달러(평균 +1.49%)를 기록했습니다.</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">약 2주간 이상거래 시그널 2,800여 건을 감지해 실제 가격으로 4,700여 회 채점했고, 시그널을 그대로 모의 매매에 태운 페이퍼 트레이딩은 청산 684회 기준 누적 +5,100달러(평균 +1.49%)를 기록했습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
-      <li><b>배경</b> · 이상 신호는 여러 거래소와 체인에 잠깐씩 나타났다 사라집니다. 이걸 사람이 눈으로 다 좇기 힘들어 자동으로 감시하게 했습니다</li>
-      <li><b>구현</b> · WebSocket으로 여러 거래소의 650여 개 종목을 실시간 수집하고, 가격 이상·대량 자금 이동·지갑 집중도 등 신호 10여 종을 나눠 감지합니다. 여러 신호가 한 종목에 겹치면 더 확실한 신호로 보고 알리며, 온체인 쪽은 9개 체인의 지갑과 입금 흐름까지 확인합니다</li>
-      <li><b>결과</b> · 채점 성적이 나쁜 신호는 자동으로 비중을 낮추게 했습니다. 다만 수익성이 검증됐다고 보지는 않고, 어떤 신호가 실제로 맞는지 데이터로 쌓아 가는 단계입니다. 배포 뒤 생긴 WebSocket 끊김은 비동기 구조로 바꿔 해결했습니다</li>
+      <li><b>배경</b> · 이상 시그널은 여러 거래소와 체인에 잠깐씩 나타났다 사라집니다. 이걸 사람이 눈으로 다 좇기 힘들어 자동으로 감시하게 했습니다</li>
+      <li><b>구현</b> · WebSocket으로 여러 거래소의 650여 개 종목을 실시간 수집하고, 가격 이상·대량 자금 이동·지갑 집중도 등 시그널 10여 종을 나눠 감지합니다. 여러 시그널이 한 종목에 겹치면 더 확실한 시그널로 보고 알리며, 온체인 쪽은 9개 체인의 지갑과 입금 흐름까지 확인합니다</li>
+      <li><b>결과</b> · 채점 성적이 나쁜 시그널은 자동으로 비중을 낮추게 했습니다. 다만 수익성이 검증됐다고 보지는 않고, 어떤 시그널이 실제로 맞는지 데이터로 쌓아 가는 단계입니다. 배포 뒤 생긴 WebSocket 끊김은 비동기 구조로 바꿔 해결했습니다</li>
     </ul></div></div>
   </div>
 
   <div class="exp">
-    <div class="exp-h"><span class="cat">[개인 프로젝트]</span>멀티체인 DEX 신규 토큰 신호 봇</div>
+    <div class="exp-h"><span class="cat">[개인 프로젝트]</span>멀티체인 DEX 신규 토큰 시그널 봇</div>
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.07 ~ 현재 (서버 운영 중)</div></div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">약 2주간 신규 토큰 15만여 개를 걸러 신호 1,600여 건을 발송했고, 결과 추적이 끝난 신호 1,496건 중 189건이 알림 뒤 2배 이상 올랐습니다(최고 12.9배).</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">약 2주간 신규 토큰 15만여 개를 걸러 시그널 1,600여 건을 발송했고, 결과 추적이 끝난 시그널 1,496건 중 189건이 알림 뒤 2배 이상 올랐습니다(최고 12.9배).</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
-      <li><b>배경</b> · 새로 나온 토큰이 갑자기 오르는 일은 잦습니다. 다만 가격 움직임만으로는 부족하고, 오른 이유까지 파악해야 의미 있는 신호인지 가려낼 수 있었습니다</li>
-      <li><b>구현</b> · Solana·Base·BSC·Ethereum 등 5개 체인의 DEX 신규 토큰을 실시간 감지하고, X(트위터)·Grok API로 KOL·스마트머니의 움직임과 화제성을 분석합니다. 토큰마다 이를 합친 하입 점수를 계산하고, 급락 직전 출구 신호도 함께 감지합니다. 판별에는 그동안 쌓은 지갑 거래 280만 건과 KOL 거래 41만 건을 활용합니다</li>
-      <li><b>결과</b> · 신호마다 "왜 올랐는지" 설명을 붙여 보내도록 다듬었습니다. 주요 데이터 소스가 Cloudflare 봇 차단(JA3 지문)으로 막히자 curl_cffi로 브라우저 지문을 우회해 수집을 안정화했습니다</li>
+      <li><b>배경</b> · 새로 나온 토큰이 갑자기 오르는 일은 잦습니다. 다만 가격 움직임만으로는 부족하고, 오른 이유까지 파악해야 의미 있는 시그널인지 가려낼 수 있었습니다</li>
+      <li><b>구현</b> · Solana·Base·BSC·Ethereum 등 5개 체인의 DEX 신규 토큰을 실시간 감지하고, X(트위터)·Grok API로 KOL·스마트머니의 움직임과 화제성을 분석합니다. 토큰마다 이를 합친 하입 점수를 계산하고, 급락 직전 출구 시그널도 함께 감지합니다. 판별에는 그동안 쌓은 지갑 거래 280만 건과 KOL 거래 41만 건을 활용합니다</li>
+      <li><b>결과</b> · 시그널마다 "왜 올랐는지" 설명을 붙여 보내도록 다듬었습니다. 주요 데이터 소스가 Cloudflare 봇 차단(JA3 지문)으로 막히자 curl_cffi로 브라우저 지문을 우회해 수집을 안정화했습니다</li>
     </ul></div></div>
   </div>
 
@@ -146,11 +146,11 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
   <div class="exp">
     <div class="exp-h"><span class="cat">[개인 프로젝트]</span>예측시장 인사이더·이상거래 감지 봇</div>
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.01 ~ 2026.05</div></div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">약 5개월간 예측시장 거래를 실시간 분석해 인사이더 의심 지갑 147개를 적발하고, 고신뢰 신호 880여 건을 선별해 알렸습니다. 정산 결과와 대조한 신호 방향 적중률은 52.9%(1,485건 중 785건)였습니다.</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">약 5개월간 예측시장 거래를 실시간 분석해 인사이더 의심 지갑 147개를 적발하고, 고신뢰 시그널 880여 건을 선별해 알렸습니다. 정산 결과와 대조한 시그널 방향 적중률은 52.9%(1,485건 중 785건)였습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
       <li><b>배경</b> · 이상 패턴은 거래 내역과 지갑 이력, 시장 상황을 같이 봐야 잡힙니다. 매번 반복하기엔 손이 많이 갔고, 거래가 쌓일수록 놓치는 게 생겼습니다</li>
       <li><b>구현</b> · WebSocket으로 거래를 모으고 지갑 생성 시점과 포지션 집중도, 시장 상황, 지갑 간 움직임을 합쳐 0~100점으로 계산했습니다</li>
-      <li><b>결과</b> · 공개된 인사이더 사례 5건에서 반복되는 특징을 감지 기준에 반영했습니다. 다만 적중률과 달리 신호를 그대로 따랐다고 가정한 모의 손익은 마이너스여서, 이 신호는 매매 근거가 아니라 감시·적발용이라고 결론지었습니다. 점수와 근거는 SQLite에 저장해 신호마다 판정 이유를 되짚을 수 있게 했고, 신호는 일부 사람들에게 공유했습니다</li>
+      <li><b>결과</b> · 공개된 인사이더 사례 5건에서 반복되는 특징을 감지 기준에 반영했습니다. 다만 적중률과 달리 시그널을 그대로 따랐다고 가정한 모의 손익은 마이너스여서, 이 시그널은 매매 근거가 아니라 감시·적발용이라고 결론지었습니다. 점수와 근거는 SQLite에 저장해 시그널마다 판정 이유를 되짚을 수 있게 했고, 시그널은 일부 사람들에게 공유했습니다</li>
     </ul></div></div>
   </div>
 
@@ -214,12 +214,12 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
     <div class="card honest-col">
       <h3 style="color:var(--accent);">기술 스택</h3>
       <ul class="clean">
-        <li><b>언어</b> · Python(주력) · TypeScript · JavaScript · PowerShell · Bash · Rust(보조)</li>
+        <li><b>언어</b> · Python(주력) · TypeScript · JavaScript · PowerShell · Bash</li>
         <li><b>AI · LLM</b> · Claude API · OpenAI API · Grok API · Claude Code · Codex · tool-use · 멀티에이전트</li>
         <li><b>실시간 · 비동기</b> · asyncio · WebSocket · aiohttp · httpx</li>
         <li><b>데이터</b> · SQLite(aiosqlite) · SQLAlchemy · Airtable</li>
         <li><b>온체인 · 트레이딩</b> · web3.py · eth-account · solana-py · py-clob-client · predict-sdk · ccxt · python-binance · Moralis API</li>
-        <li><b>수집 · 우회</b> · curl_cffi · Playwright · Puppeteer · BeautifulSoup</li>
+        <li><b>수집 · 우회</b> · curl_cffi · Playwright · BeautifulSoup</li>
         <li><b>화면 인식 · 미디어</b> · OpenCV · easyocr · mss · pyautogui · pywin32 · faster-whisper · ffmpeg</li>
         <li><b>웹 · 게임</b> · Phaser · React · Vite · HTML5 Canvas · FastAPI · Next.js · Tailwind</li>
         <li><b>마케팅 · 분석</b> · GA · GTM · Clarity · Looker Studio</li>
