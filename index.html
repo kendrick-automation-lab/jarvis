@@ -80,7 +80,7 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
   <div class="exp">
     <div class="exp-h"><span class="cat">[업무 자동화 PoC]</span>ERP·협업툴 사내 업무 자동화 + 대화형 에이전트</div>
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.05 ~ 2026.06</div></div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">Slack에서 자연어로 물으면 ERP 데이터를 조회해 답하는 에이전트, 안전재고 알림·입금 매칭·구매전표 초안 자동화 3종, 멀티에이전트 브리핑까지 하나의 동작하는 데모로 완성했습니다.</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">Slack 자연어 질의 응답, 반복 업무 자동화 3종(안전재고 알림·입금 매칭·구매전표 초안), 멀티에이전트 브리핑까지 담긴 업무 자동화 데모를 완성했습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
       <li><b>배경</b> · 국내 중소 제조·유통사에서 흔한 ERP·협업툴 반복 업무를 가정해 골랐습니다. 실제 ERP(이카운트)와 협업툴(Flow)은 데모 계정으로는 API가 막혀, Airtable과 Slack으로 같은 구조를 짰습니다</li>
       <li><b>구현</b> · 안전재고 확인이나 입금 대조처럼 규칙이 분명한 일은 코드로 처리하고 열린 질문만 에이전트로 넘겼습니다. 답이 조회된 데이터 안에서만 나오도록 제한하고, 확인되지 않으면 모른다고 답하게 했습니다. 발주나 입금처럼 결정이 필요한 일은 사람이 승인합니다</li>
@@ -91,11 +91,11 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
   <div class="exp">
     <div class="exp-h"><span class="cat">[개인 프로젝트]</span>화면 인식 기반 게임 자동화</div>
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.05 ~ 2026.06</div></div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">사람이 붙어 있어야 했던 반복 사냥이 무인으로 돌아가게 됐고, 해상도가 다른 PC와 노트북 두 대에서 실사용했습니다. 18일간 커밋 267개, 약 1만 줄 규모로 개발했습니다.</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">반복 사냥을 무인 자동화해 PC와 노트북 두 대에서 실사용했습니다. 18일간 커밋 267개, 약 1만 줄 규모로 개발했습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
       <li><b>배경</b> · 조작 가능한 API가 없어 화면을 실시간으로 캡처해 픽셀 단위로 상태를 판정해야 했습니다. PC와 노트북은 해상도가 서로 달라, 환경마다 좌표가 어긋나는 문제가 있었습니다</li>
       <li><b>구현</b> · 템플릿 매칭과 HSV 색상 기반 BLOB 검출을 병행했습니다. 게임 창을 1298×767로 표준화하고 절대 좌표를 0~1 상대 좌표로 정규화해, 해상도와 무관하게 동일한 좌표 로직을 적용했습니다. 환경별 값은 설정 파일로 분리했습니다</li>
-      <li><b>결과와 개선</b> · 운영 중 발생한 입력 누락·포커스 이탈·오탐지를 안정화 패치 8회로 해결했습니다. 이동 가능 경계가 좌우로 비대칭(좌 0.04·우 0.77)인 것을 실측해 반영했습니다</li>
+      <li><b>결과</b> · 운영 중 발생한 입력 누락·포커스 이탈·오탐지를 안정화 패치 8회로 해결했습니다. 이동 가능 경계가 좌우로 비대칭(좌 0.04·우 0.77)인 것을 실측해 반영했습니다</li>
     </ul></div></div>
   </div>
 
@@ -106,7 +106,7 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
       <li><b>배경</b> · 공식 IP 애셋과 지정 플랫폼이 주어진 게임잼이었습니다. 짧게 여러 판 즐기는 서바이버 장르를 골랐습니다</li>
       <li><b>구현</b> · 투사체 자동공격과 군집 스폰을 넣고, 레벨업마다 3택1로 능력을 고르게 했습니다. 보스전과 영구강화 상점도 붙였습니다. Phaser 엔진으로 화면을 그리고 게임 서버와 리더보드를 연동했습니다</li>
-      <li><b>결과와 개선</b> · 플레이테스트를 반복하며 조작감과 밸런스, UI를 다듬었습니다. 출시 뒤에는 실제 플레이 데이터(일 활성 13명·평균 플레이 3분 29초·이탈률 15.6%)를 지표로 개선점을 찾고 있습니다</li>
+      <li><b>결과</b> · 플레이테스트를 반복하며 조작감과 밸런스, UI를 다듬었습니다. 출시 뒤에는 실제 플레이 데이터(일 활성 13명·평균 플레이 3분 29초·이탈률 15.6%)를 지표로 개선점을 찾고 있습니다</li>
     </ul></div></div>
   </div>
 
@@ -117,18 +117,18 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
       <li><b>배경</b> · 이상 신호는 여러 거래소와 체인에 잠깐씩 나타났다 사라집니다. 이걸 사람이 눈으로 다 좇기 힘들어 자동으로 감시하게 했습니다</li>
       <li><b>구현</b> · WebSocket으로 여러 거래소의 650여 개 종목을 실시간 수집하고, 가격 이상·대량 자금 이동·지갑 집중도 등 신호 10여 종을 나눠 감지합니다. 여러 신호가 한 종목에 겹치면 더 확실한 신호로 보고 알리며, 온체인 쪽은 9개 체인의 지갑과 입금 흐름까지 확인합니다</li>
-      <li><b>검증과 한계</b> · 채점 성적이 나쁜 신호는 자동으로 비중을 낮추게 했습니다. 다만 수익성이 검증됐다고 보지는 않고, 어떤 신호가 실제로 맞는지 데이터로 쌓아 가는 단계입니다. 배포 뒤 생긴 WebSocket 끊김은 비동기 구조로 바꿔 해결했습니다</li>
+      <li><b>결과</b> · 채점 성적이 나쁜 신호는 자동으로 비중을 낮추게 했습니다. 다만 수익성이 검증됐다고 보지는 않고, 어떤 신호가 실제로 맞는지 데이터로 쌓아 가는 단계입니다. 배포 뒤 생긴 WebSocket 끊김은 비동기 구조로 바꿔 해결했습니다</li>
     </ul></div></div>
   </div>
 
   <div class="exp">
     <div class="exp-h"><span class="cat">[개인 프로젝트]</span>멀티체인 DEX 신규 토큰 신호 봇</div>
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.07 ~ 현재 (서버 운영 중)</div></div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">약 2주간 5개 체인의 신규 토큰 15만여 개를 수집해, 선별한 신호 1만 1천여 건을 텔레그램으로 발송했습니다. 지갑 거래 280만 건과 KOL 거래 41만 건을 축적해 스마트머니 판별 기준으로 썼습니다.</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">약 2주간 5개 체인의 신규 토큰 15만여 개를 수집해, 선별한 신호 1만 1천여 건을 텔레그램으로 발송했습니다. 지갑 거래 280만 건과 KOL 거래 41만 건의 분석 데이터를 축적했습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
       <li><b>배경</b> · 새로 나온 토큰이 갑자기 오르는 일은 잦습니다. 다만 가격 움직임만으로는 부족하고, 오른 이유까지 파악해야 의미 있는 신호인지 가려낼 수 있었습니다</li>
       <li><b>구현</b> · Solana·Base·BSC·Ethereum 등 5개 체인의 DEX 신규 토큰을 실시간 감지하고, X(트위터)·Grok API로 KOL·스마트머니의 움직임과 화제성을 분석합니다. 토큰마다 이를 합친 하입 점수를 계산하고, 급락 직전 출구 신호도 함께 감지합니다</li>
-      <li><b>결과와 개선</b> · 신호마다 "왜 올랐는지" 설명을 붙여 보내도록 다듬었습니다. 주요 데이터 소스가 Cloudflare 봇 차단(JA3 지문)으로 막히자 curl_cffi로 브라우저 지문을 우회해 수집을 안정화했습니다</li>
+      <li><b>결과</b> · 신호마다 "왜 올랐는지" 설명을 붙여 보내도록 다듬었습니다. 주요 데이터 소스가 Cloudflare 봇 차단(JA3 지문)으로 막히자 curl_cffi로 브라우저 지문을 우회해 수집을 안정화했습니다</li>
     </ul></div></div>
   </div>
 
@@ -139,7 +139,7 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
       <li><b>배경</b> · 예측시장은 동시에 열리는 이벤트가 많아, 사람이 일정한 주기로 전부 확인하기 어려웠습니다</li>
       <li><b>구현</b> · 활성 이벤트 100여 개를 불러와 거래량과 유동성 기준으로 상위 20개를 추리고, 보유 포트폴리오와 함께 Claude API에 넘겨 매매 의견을 JSON으로 받았습니다</li>
-      <li><b>검증과 개선</b> · 초기 표본 14건의 p-value는 0.53이었습니다. 우연으로도 나올 수 있는 값이라 이것만으로 수익성이 검증됐다고 보지 않았습니다. 한도를 벗어난 답은 코드로 걸렀고, 판단 과정과 모의 결과는 로그로 남겨 언제든 되짚습니다</li>
+      <li><b>결과</b> · 초기 표본 14건의 p-value는 0.53이었습니다. 우연으로도 나올 수 있는 값이라 이것만으로 수익성이 검증됐다고 보지 않았습니다. 한도를 벗어난 답은 코드로 걸렀고, 판단 과정과 모의 결과는 로그로 남겨 언제든 되짚습니다</li>
     </ul></div></div>
   </div>
 
@@ -150,18 +150,18 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
       <li><b>배경</b> · 이상 패턴은 거래 내역과 지갑 이력, 시장 상황을 같이 봐야 잡힙니다. 매번 반복하기엔 손이 많이 갔고, 거래가 쌓일수록 놓치는 게 생겼습니다</li>
       <li><b>구현</b> · WebSocket으로 거래를 모으고 지갑 생성 시점과 포지션 집중도, 시장 상황, 지갑 간 움직임을 합쳐 0~100점으로 계산했습니다</li>
-      <li><b>검증과 개선</b> · 공개된 인사이더 사례 5건에서 반복되는 특징을 감지 기준에 반영했습니다. 발송한 신호 중 정산된 1,485건을 실제 시장 결과와 대조하니 785건이 적중했습니다. 점수와 근거는 SQLite에 저장해 신호마다 판정 이유를 되짚을 수 있게 했고, 이 신호는 일부 사람들에게 공유했습니다</li>
+      <li><b>결과</b> · 공개된 인사이더 사례 5건에서 반복되는 특징을 감지 기준에 반영했습니다. 발송한 신호 중 정산된 1,485건을 실제 시장 결과와 대조하니 785건이 적중했습니다. 점수와 근거는 SQLite에 저장해 신호마다 판정 이유를 되짚을 수 있게 했고, 이 신호는 일부 사람들에게 공유했습니다</li>
     </ul></div></div>
   </div>
 
   <div class="exp">
     <div class="exp-h"><span class="cat">[개인 프로젝트]</span>예측시장 델타뉴트럴 차익거래 봇</div>
     <div class="exp-r"><div class="lab">기간</div><div class="val">2026.01 ~ 2026.05</div></div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">약 4개월 동안 predict.fun과 Polymarket 시장 203개에서 가격이 어긋나는 순간마다 봇이 모의 주문을 걸어, 체결 644건과 누적 약 15만 달러 규모를 기록했습니다. 한쪽만 체결돼 위험이 남는 상황도 자동 헤지로 복구되는 것까지 검증했습니다.</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">약 4개월간 predict.fun과 Polymarket 시장 203개에서 모의 주문 체결 644건, 누적 약 15만 달러 규모를 기록했습니다. 한쪽만 체결돼 위험이 남는 상황의 자동 헤지 복구까지 검증했습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
       <li><b>배경</b> · 가격이 어긋난 두 거래소에서 서로 반대 방향으로 포지션을 잡아 방향 위험을 줄이는 전략입니다. 다만 가격 차이는 금방 사라지고 한쪽만 체결되면 위험이 남아, 수동으로는 이 타이밍을 따라가기 벅찼습니다</li>
       <li><b>구현</b> · predict.fun SDK와 Polymarket CLOB, Polygon RPC를 붙여 주문·체결·헤지·복구를 비동기로 처리했습니다</li>
-      <li><b>검증과 개선</b> · 3시간·12시간 주기로 시뮬레이션을 돌리며 가격 차이와 보상 조건이 맞아떨어지는(EV+) 상황을 포착했습니다. 관찰 로그 8,773줄을 분석하고 설정 158개를 조정하며 복구 로직을 다듬었습니다</li>
+      <li><b>결과</b> · 3시간·12시간 주기로 시뮬레이션을 돌리며 가격 차이와 보상 조건이 맞아떨어지는(EV+) 상황을 포착했습니다. 관찰 로그 8,773줄을 분석하고 설정 158개를 조정하며 복구 로직을 다듬었습니다</li>
     </ul></div></div>
   </div>
 
@@ -171,7 +171,7 @@ footer .name{font-weight:700;font-size:20px;color:#fff;margin-bottom:10px;}
 
   <div class="exp">
     <div class="exp-h"><span class="cat">[㈜메타플라이어 · 1년 1개월]</span>고객 맞춤 마케팅 자동화 · 데이터 분석</div>
-    <div class="exp-r"><div class="lab">성과</div><div class="val">설계한 마케팅 자동화 시나리오 3건이 고객사 실서비스에 적용돼 운영됐습니다. GA·GTM·Clarity·Looker Studio를 통합한 대시보드로 고객사의 유입·전환 지표를 관리했습니다.</div></div>
+    <div class="exp-r"><div class="lab">성과</div><div class="val">설계한 마케팅 자동화 시나리오 3건이 고객사 실서비스에 적용돼 운영됐습니다. GA·GTM·Clarity·Looker Studio를 묶은 통합 지표 대시보드를 구축했습니다.</div></div>
     <div class="exp-r"><div class="lab">내용</div><div class="val"><ul>
       <li>세미나·교육 안내, 뉴스레터, 행사 전후 후속 연락처럼 고객사마다 필요한 업무를 자동화 시나리오로 짰습니다</li>
       <li>메일을 열었는지, 링크를 눌렀는지, 설문에 답했는지에 따라 확인 안내와 참여 독려, 후속 메일이 이어지도록 조건을 나눴습니다</li>
